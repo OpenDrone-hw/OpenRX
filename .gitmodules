@@ -1,0 +1,3 @@
+[submodule "libs/KiCad-Library"]
+	path = libs/KiCad-Library
+	url = https://github.com/incutec-hw/KiCad-Library.git

@@ -2,6 +2,8 @@
 
 Open-source **ExpressLRS (ELRS) receiver** line for FPV/RC. Four board variants share one **Espressif ESP32-C3** core, an on-board **TLV75533** 3.3 V LDO, and the upstream ExpressLRS firmware; they differ only in radio IC, frequency band, RF front-end, and ELRS antenna. All four are 6-layer.
 
+Build video: [How LoRa (ExpressLRS) Drone Receivers Work](https://www.youtube.com/watch?v=ssmQkRkXE84)
+
 | | | | |
 |:---:|:---:|:---:|:---:|
 | **Lite** | **Lite-UFL** | **Mono** | **Gemini** |
@@ -124,6 +126,11 @@ Upstream ExpressLRS targets (`shared/elrs-targets/`):
 | Gemini | OpenRX Gemini XrossBand RX | `Unified_ESP32C3_LR1121_RX` | esp32-c3 | UART · Wi-Fi · Betaflight |
 
 Minimum ExpressLRS version **3.5.0**. Hardware pin maps live in the per-variant target JSON.
+
+## Links
+
+- Product page: [opendrone.be/products/openrx](https://opendrone.be/products/openrx)
+- Video channel: [JustFPV on YouTube](https://www.youtube.com/@justfpv1432)
 
 ## License
 

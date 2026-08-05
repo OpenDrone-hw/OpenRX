@@ -35,8 +35,8 @@ replicate_layout.log
 # Production output (generated, re-exportable)
 **/production/
 
-# Fabrication toolkit config
-fabrication-toolkit-options.json
+# Vendor datasheet cache (local only, not distributed)
+/datasheets/
 
 # Generated files
 **/netlist.xml

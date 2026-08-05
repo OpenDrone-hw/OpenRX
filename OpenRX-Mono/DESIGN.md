@@ -1,82 +1,80 @@
 # OpenRX-Mono
 
-Single-LR1121 multi-band receiver. ESP32-C3 + LR1121 + RFX2401C + SKY13414 + Johanson IPD.
+Single-LR1121 dual-band receiver. ESP32-C3 + LR1121 (U3) + RFX2401C PA/LNA (U4) + SKY13373-460LF RF switch (U5) + Johanson 0900PC16J0042001E balun/IPD (T1).
+
+## Board preview
+
+| Front | Back |
+|-------|------|
+| ![Front](images/front.png) | ![Back](images/back.png) |
 
 ## Schematic
 
 - Main sheet: `esp32c3_lr1121_mono.kicad_sch`
-- Sub-GHz RX: `LR1121 pins 29-30 → IPD (T1) RX → SKY13414 RF1 → ANT → JP1 U.FL`
-- Sub-GHz TX HP: `LR1121 pin 32 → IPD (T1) TX_HP → SKY13414 RF3 → ANT → JP1 U.FL`
-- Sub-GHz TX LP: disconnected (IPD TX_LP pin 8 = NC, ELRS never uses LP PA)
-- 2.4 GHz path: `LR1121 RFIO_HF → 2450FM07D0034 (USB2) → RFX2401C TXRX → PA/LNA → RFX2401C ANT → C16 0.3pF → SKY13414 RF4 → ANT → JP1 U.FL`
-- RF switch control: `DIO7 → V3, DIO8 → V2, V1 → GND`
-- RFX2401C control: `DIO5 → RXEN, DIO6 → TXEN`
+- 2.4 GHz path: `LR1121 RFIO_HF -> 2450FM07D0034T (FL1) -> RFX2401C TXRX -> PA/LNA -> RFX2401C ANT -> SKY13373 -> ANT -> J1 U.FL`
+- Sub-GHz TX: `LR1121 RFO_HP_LF -> IPD (T1) TX_HP -> SKY13373 -> ANT -> J1 U.FL`
+- Sub-GHz RX: `J1 U.FL -> ANT -> SKY13373 -> IPD (T1) RX -> LR1121 RFI_P/N_LF`
+- IPD TX_LP is disconnected: ELRS never uses the LR1121 LP PA
+- RF switch and front-end are driven by the LR1121's own DIOs, not ESP32-C3 GPIOs: `DIO5 -> RFX2401C RXEN`, `DIO6 -> RFX2401C TXEN`, `DIO7 -> SKY13373 V1`, `DIO8 -> SKY13373 V2`
 
-### SKY13414 Port Mapping (V1=GND)
+### SKY13373 truth table (V1, V2)
 
-| DIO7 (V3) | DIO8 (V2) | Port | Path |
-|---|---|---|---|
-| 0 | 0 | RF1 | Sub-GHz RX (IPD pin 6) |
-| 1 | 0 | RF2 | NC |
-| 0 | 1 | RF3 | Sub-GHz TX HP (IPD pin 9) |
-| 1 | 1 | RF4 | 2.4GHz TX/RX (RFX2401C ANT) |
+| V1 | V2 | Path |
+|---|---|---|
+| 1 | 0 | 2.4 GHz TX/RX (RFX2401C ANT) |
+| 0 | 1 | Sub-GHz TX HP (IPD TX_HP) |
+| 1 | 1 | Sub-GHz RX (IPD RX) |
+| 0 | 0 | Shutdown, antenna disconnected |
 
-IPD TX_LP (pin 8) is disconnected — ELRS never uses LP PA on these boards.
+### 2450FM07D0034 impedance note
 
-### 2450FM07D0034 Impedance Note
-
-Filter pin 1 (chipset side) is 40 ohm, designed for SX1280/SX1281. LR1121 RFIO_HF is 50 ohm. Mismatch gives ~19 dB return loss (VSWR 1.25), only 0.05 dB mismatch loss — negligible. The filter's own internal return loss (14 dB typ) dominates. Keep as-is.
+Filter pin 1 (chipset side) is 40 ohm, designed for SX1280/SX1281. LR1121 RFIO_HF is 50 ohm. The mismatch gives ~19 dB return loss (VSWR 1.25), only 0.05 dB mismatch loss: negligible. The filter's own internal return loss (14 dB typ) dominates. Kept as-is.
 
 ## Firmware
 
 - ELRS target: `Unified_ESP32C3_LR1121_RX`
 - Hardware JSON: `/shared/elrs-targets/OpenRX Mono LR1121.json`
-- `radio_rfsw_ctrl: [15, 0, 0, 8, 8, 14, 0, 13]` — DIO5=RXEN, DIO6=TXEN, DIO7=V3, DIO8=V2
+- `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`; each byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch` (bit0 = DIO5 RXEN, bit1 = DIO6 TXEN, bit2 = DIO7 V1, bit3 = DIO8 V2)
+- `radio_dcdc: true`
+- Requires the ExpressLRS fork branch (TCXO enable via `SetTcxoMode`): see [../FLASHING.md](../FLASHING.md) sections 1 and 10
 
-### rfsw_ctrl Decode
+### rfsw_ctrl decode
 
-| Index | Mode | Value | Binary | DIO5 | DIO6 | DIO7 | DIO8 |
-|---|---|---|---|---|---|---|---|
-| 0 | Enable | 15 | 1111 | on | on | on | on |
-| 1 | Standby | 0 | 0000 | 0 | 0 | 0 | 0 |
-| 2 | SubGHz RX | 0 | 0000 | 0 | 0 | 0 | 0 |
-| 3 | SubGHz TX LP | 8 | 1000 | 0 | 0 | 0 | 1 |
-| 4 | SubGHz TX HP | 8 | 1000 | 0 | 0 | 0 | 1 |
-| 5 | 2.4GHz TX | 14 | 1110 | 0 | 1 | 1 | 1 |
-| 6 | unused | 0 | - | - | - | - | - |
-| 7 | 2.4GHz RX | 13 | 1101 | 1 | 0 | 1 | 1 |
+| Index | Mode | Value | DIO5 (RXEN) | DIO6 (TXEN) | DIO7 (V1) | DIO8 (V2) |
+|---|---|---|---|---|---|---|
+| 0 | Enable | 15 | on | on | on | on |
+| 1 | Standby | 0 | 0 | 0 | 0 | 0 |
+| 2 | Sub-GHz RX | 12 | 0 | 0 | 1 | 1 |
+| 3 | Sub-GHz TX LP | 8 | 0 | 0 | 0 | 1 |
+| 4 | Sub-GHz TX HP | 8 | 0 | 0 | 0 | 1 |
+| 5 | 2.4 GHz TX | 6 | 0 | 1 | 1 | 0 |
+| 6 | unused | 0 | - | - | - | - |
+| 7 | 2.4 GHz RX | 5 | 1 | 0 | 1 | 0 |
 
-### GPIO Map
+### GPIO map
 
-| GPIO | Function | LR1121 Pin |
-|---|---|---|
-| 1 | IRQ (DIO1) | 24 |
-| 2 | RST | 6 |
-| 3 | BUSY (DIO0) | 25 |
-| 4 | MOSI | via SPI |
-| 5 | MISO | via SPI |
-| 6 | SCK | via SPI |
-| 7 | NSS | via SPI |
-| 8 | LED | - |
-| 9 | Button | - |
+| GPIO | Function |
+|---|---|
+| 1 | IRQ (DIO1) |
+| 2 | RST |
+| 3 | BUSY |
+| 4 | MOSI |
+| 5 | MISO |
+| 6 | SCK |
+| 7 | NSS |
+| 8 | LED |
+| 9 | BOOT |
 
-## Flash Interface
+## Flash interface
 
 - Pads: `5V`, `GND`, `RX`, `TX`
-- `BOOT` pad + tactile button on GPIO9
-- Hold BOOT/button during power-up for UART download mode
-- Use Wi-Fi OTA after first flash
+- `BOOT` pad (TP5): short to GND during power-up to enter UART download mode (no button on the Mono)
+- Wi-Fi OTA after first flash. Full procedures: [../FLASHING.md](../FLASHING.md)
 
 ## Sourcing
 
-- `C255353` SKY13414-485LF — 28K LCSC stock
-- `C19842466` 0900PC16J0042001E — consign from DigiKey (~$0.49), 0 LCSC stock
+- `C150853` SKY13373-460LF
+- `C19842466` 0900PC16J0042001E: consign from DigiKey, 0 LCSC stock
 - `C7498014` LR1121IMLTRT
-- `C2651081` 2450FM07D0034
-- `C19213` RFX2401C
-
-## Release To-Do
-
-- Finish PCB routing / DRC
-- Validate RF path switching and rfsw_ctrl on hardware (NanoVNA)
-- Run CE / RED pre-scan for 2.4 GHz and sub-GHz operation
+- `C2651081` 2450FM07D0034T
+- `C783588` RFX2401C

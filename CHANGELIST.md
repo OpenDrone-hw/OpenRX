@@ -8,7 +8,7 @@ items still need doing in KiCad; "already fixed" is for reference.
 
 ---
 
-## OPEN — to do (in KiCad)
+## Open, to do in KiCad
 
 ### 🔴 Critical
 - [ ] **Swap PH↔EN on both drive drivers (boot-safety — motors run at power-on otherwise).**

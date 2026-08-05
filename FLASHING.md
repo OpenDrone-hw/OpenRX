@@ -13,7 +13,7 @@ facts only. This file absorbs the former BRINGUP.md and BRINGUP-DEBUG.md.
   ELRS never runs `SetTcxoMode`, the TCXO stays unpowered, and the LR1121 passes SPI
   detection (internal RC oscillator) but does no RF. Fix list in §10. All commands run
   from the fork's `src/` directory.
-- **Bind phrase**: `stan123` (UID `[245,163,168,55,145,85]`), baked at configure time.
+- **Bind phrase**: `your-bind-phrase` (UID derived from it), baked at configure time.
   The RX boots already bound; there is no bind step.
 - **CRSF baud**: `--rx-baud 420000`. Betaflight's CRSF driver is fixed at 420000.
 - **Regulatory domain, critical**: `user_defines.txt` sets a build-time default
@@ -53,8 +53,8 @@ cd ~/Documents/GitHub/ExpressLRS/src
 pio run -e <ENV>
 cp .pio/build/<ENV>/firmware.bin /tmp/firmware.bin
 python3 python/binary_configurator.py --target <TARGET> \
-  --phrase stan123 --domain eu_868 --auto-wifi 60 \
-  --ssid stan123 --password stan12345 --rx-baud 420000 /tmp/firmware.bin
+  --phrase <bind-phrase> --domain eu_868 --auto-wifi 60 \
+  --ssid <ap-ssid> --password <ap-password> --rx-baud 420000 /tmp/firmware.bin
 ```
 
 | board | ENV | TARGET | `--domain` |
@@ -129,7 +129,7 @@ Verified working on OpenFC-Lite with a Betaflight build that includes the
 cd ~/Documents/GitHub/ExpressLRS/src
 cp .pio/build/Unified_ESP32C3_LR1121_RX_via_UART/firmware.bin /tmp/firmware.bin
 python3 python/binary_configurator.py --target opendrone.rx_dual.mono \
-  --phrase stan123 --domain eu_868 --auto-wifi 60 --ssid stan123 --password stan12345 \
+  --phrase <bind-phrase> --domain eu_868 --auto-wifi 60 --ssid <ap-ssid> --password <ap-password> \
   --rx-baud 420000 --flash bf --port /dev/cu.usbmodem<N> /tmp/firmware.bin
 ```
 
@@ -169,7 +169,7 @@ WiFi serves **config and OTA only**. There is no log endpoint, no WebSocket, no 
 
 **Entering WiFi mode**: power the RX (FC USB is enough), leave the TX off, wait
 `wifi-on-interval` = 60 s. LED pulses yellow/green. The RX first tries to join network
-`stan123` (password `stan12345`, as baked): then it is at `http://elrs_rx.local`. If
+the configured AP SSID and password: then it is at `http://elrs_rx.local`. If
 that network does not exist it starts AP **`ExpressLRS RX`** (password `expresslrs`):
 connect and it is at `http://10.0.0.1`.
 

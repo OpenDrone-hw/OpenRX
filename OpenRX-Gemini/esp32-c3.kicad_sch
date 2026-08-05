@@ -3445,6 +3445,12 @@
 		(uuid "02f67434-b204-431a-8afa-67f1a7fad66f")
 	)
 	(junction
+		(at 40.64 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "129b084f-0c45-4906-9f2b-0997aa617f9d")
+	)
+	(junction
 		(at 167.64 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3931,6 +3937,16 @@
 			(type default)
 		)
 		(uuid "3cc0a8b9-4497-441d-a0c6-85d6a8527e74")
+	)
+	(wire
+		(pts
+			(xy 40.64 142.24) (xy 40.64 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f157eb5-250f-4924-ab0e-b8d1d801ccd1")
 	)
 	(wire
 		(pts
@@ -6800,6 +6816,85 @@
 			(project "OpenRX-Gemini"
 				(path "/c2d3e4f5-a6b7-8901-cdef-234567890abc/3494b709-9fe4-4ec8-a607-11cdb4cd6d78"
 					(reference "X1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51cd92d1-abb2-4bd5-8a7e-01c6cced69b2")
+		(property "Reference" "TP5"
+			(at 43.18 137.6679 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 43.18 140.2079 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 45.72 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 40.64 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "69b66b47-5175-437f-b5c8-1d9fae1916e6")
+		)
+		(instances
+			(project "OpenRX-Gemini"
+				(path "/c2d3e4f5-a6b7-8901-cdef-234567890abc/3494b709-9fe4-4ec8-a607-11cdb4cd6d78"
+					(reference "TP5")
 					(unit 1)
 				)
 			)

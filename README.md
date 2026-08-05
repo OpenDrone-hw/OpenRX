@@ -9,6 +9,24 @@ Open-source **ExpressLRS (ELRS) receiver** line for FPV/RC. Four board variants 
 | <img src="images/openrx-lite-back.png" width="200" alt="OpenRX-Lite back" /> | <img src="images/openrx-lite-ufl-back.png" width="200" alt="OpenRX-Lite-UFL back" /> | <img src="images/openrx-mono-back.png" width="200" alt="OpenRX-Mono back" /> | <img src="images/openrx-gemini-back.png" width="200" alt="OpenRX-Gemini back" /> |
 | SX1281, 2.4 GHz, chip antenna | SX1281, 2.4 GHz, U.FL | LR1121, dual-band, U.FL | 2× LR1121, dual-radio, 2× U.FL |
 
+## Open source hardware certification
+
+<a href="https://certification.oshwa.org/list.html">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/oshwa-certified-dark.svg" />
+    <img src="images/oshwa-certified.svg" width="160" alt="OSHWA Certified Open Source Hardware" />
+  </picture>
+</a>
+
+All four variants are **certified open source hardware** by the [Open Source Hardware Association](https://www.oshwa.org/). Each board carries its own OSHWA UID:
+
+| Variant | OSHWA UID |
+|---|---|
+| **Lite** | [BE000030](https://certification.oshwa.org/be000030.html) |
+| **Lite-UFL** | [BE000031](https://certification.oshwa.org/be000031.html) |
+| **Mono** | [BE000032](https://certification.oshwa.org/be000032.html) |
+| **Gemini** | [BE000033](https://certification.oshwa.org/be000033.html) |
+
 ## Variants
 
 | Variant | Radio IC | Band | ELRS antenna | RF front-end | Size | Layers |

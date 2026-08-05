@@ -1,5 +1,9 @@
 # macOS
 .DS_Store
+__MACOSX/
+
+# Redundant zip archives of directories already committed
+firmware-handoff.zip
 
 # KiCad backup and autosave
 *-backups/

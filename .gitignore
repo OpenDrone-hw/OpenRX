@@ -55,3 +55,6 @@ docs/
 # Claude
 .claude/
 CLAUDE.md
+
+# firmware handoff artifacts carry bench credentials, keep untracked
+OpenRX-Gemini/firmware-handoff/

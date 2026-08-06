@@ -1,5 +1,9 @@
 # macOS
 .DS_Store
+__MACOSX/
+
+# Redundant zip archives of directories already committed
+firmware-handoff.zip
 
 # KiCad backup and autosave
 *-backups/
@@ -31,8 +35,8 @@ replicate_layout.log
 # Production output (generated, re-exportable)
 **/production/
 
-# Fabrication toolkit config
-fabrication-toolkit-options.json
+# Vendor datasheet cache (local only, not distributed)
+/datasheets/
 
 # Generated files
 **/netlist.xml
@@ -51,3 +55,6 @@ docs/
 # Claude
 .claude/
 CLAUDE.md
+
+# firmware handoff artifacts carry bench credentials, keep untracked
+OpenRX-Gemini/firmware-handoff/

@@ -38,9 +38,15 @@ kicad-cli pcb drc --exit-code-violations OpenRX-<variant>/OpenRX-<variant>.kicad
 
 ## Parts
 
-New symbols, footprints and 3D models go to
-[incutec-hw/KiCad-Library](https://github.com/incutec-hw/KiCad-Library) by pull
-request there, never into this repo. Prefer LCSC basic parts.
+Add new symbols, footprints and 3D models to this repo's local libraries.
+That is the working default.
+
+[incutec-hw/KiCad-Library](https://github.com/incutec-hw/KiCad-Library) is a
+mirror of parts we already use or stock. Check it first: if the part is there,
+we have used it before, which saves sourcing work. Promoting a part into it is
+a separate deliberate step, not a requirement for contributing here.
+
+Prefer LCSC basic parts.
 
 ## Licensing
 

@@ -657,10 +657,6 @@
 		(color 0 0 0 0)
 		(uuid "3da15894-1e08-4754-9186-7bab3fa98905")
 	)
-	(no_connect
-		(at 80.01 132.08)
-		(uuid "238afa4a-0d54-48e6-8a72-85d0a0bf4d7d")
-	)
 	(wire
 		(pts
 			(xy 161.29 40.64) (xy 199.39 40.64)
@@ -833,16 +829,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 147.32) (xy 148.59 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d51e98cc-43a8-4ec7-9a98-6e6739b86343")
-	)
-	(wire
-		(pts
 			(xy 161.29 38.1) (xy 199.39 38.1)
 		)
 		(stroke
@@ -850,16 +836,6 @@
 			(type default)
 		)
 		(uuid "d55a72e9-dbe8-4666-a31d-bf48a777828e")
-	)
-	(wire
-		(pts
-			(xy 148.59 132.08) (xy 199.39 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7e8d802-929e-4dfa-8b6f-59b1854cc3a1")
 	)
 	(wire
 		(pts
@@ -5224,16 +5200,6 @@
 				(justify right)
 			)
 		)
-		(pin "VTCXO" output
-			(at 80.01 132.08 0)
-			(uuid "57bb61e7-6fa2-409c-bc56-66c6a76dd501")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(instances
 			(project "OpenRX-Gemini"
 				(path "/c2d3e4f5-a6b7-8901-cdef-234567890abc"
@@ -5359,16 +5325,6 @@
 				(justify left)
 			)
 		)
-		(pin "VTCXO" output
-			(at 199.39 132.08 180)
-			(uuid "f8051e6e-22a0-4498-ae28-1c900c010c35")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(instances
 			(project "OpenRX-Gemini"
 				(path "/c2d3e4f5-a6b7-8901-cdef-234567890abc"
@@ -5418,16 +5374,6 @@
 		(pin "TCXO_Out" output
 			(at 134.62 147.32 90)
 			(uuid "0d6c7c76-955f-4639-ac8b-62b5a016d29d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "VTCXO" input
-			(at 148.59 147.32 90)
-			(uuid "2b342b80-6ed2-4fa1-80ac-080fb6367baf")
 			(effects
 				(font
 					(size 1.27 1.27)

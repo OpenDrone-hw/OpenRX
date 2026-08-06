@@ -670,6 +670,13 @@
 				(justify left top)
 			)
 		)
+		(instances
+			(project "OpenRX-Mono"
+				(path "/b1c2d3e4-f5a6-7890-bcde-f12345678901"
+					(page "2")
+				)
+			)
+		)
 	)
 	(sheet_instances
 		(path "/"

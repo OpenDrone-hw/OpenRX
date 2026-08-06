@@ -3645,6 +3645,10 @@
 		(uuid "e637ee0d-3577-46af-9799-33db37ffd62a")
 	)
 	(no_connect
+		(at 114.3 119.38)
+		(uuid "f2a7374d-0074-477b-992b-0ea83643e3c3")
+	)
+	(no_connect
 		(at 245.11 127)
 		(uuid "ff2db801-a071-452c-80db-0fc1eaef41d5")
 	)
@@ -4782,17 +4786,6 @@
 			(justify right)
 		)
 		(uuid "74ede3b0-8dd6-42f6-adf1-91b384275381")
-	)
-	(hierarchical_label "VTCXO"
-		(shape output)
-		(at 114.3 119.38 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9b635dbb-16e3-43c9-bb6d-680bf3b51ffb")
 	)
 	(hierarchical_label "NSS"
 		(shape input)

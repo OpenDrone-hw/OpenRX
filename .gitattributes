@@ -1,0 +1,3 @@
+*.kicad_pcb -text lockable
+*.kicad_sch -text lockable
+*.kicad_pro -text lockable

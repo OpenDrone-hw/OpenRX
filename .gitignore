@@ -58,3 +58,7 @@ CLAUDE.md
 
 # firmware handoff artifacts carry bench credentials, keep untracked
 OpenRX-Gemini/firmware-handoff/
+
+# Bench flashing and bringup notes stay local until per-board guides are written
+FLASHING.md
+BRINGUP*.md

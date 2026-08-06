@@ -70,7 +70,7 @@ Common to all variants: ESP32-C3 MCU, 5 V pad input, CRSF over UART0, WS2812B st
 | `verification/` | BOM and design-verification scripts |
 | `archive/legacy-projects/` | Retired designs (Nano, 900, PWM, Dual) |
 | `DESIGN.md` | Family design notes |
-| `FLASHING.md` | Flashing and debug guide |
+d debug guide |
 
 Each variant directory holds the KiCad project (`.kicad_pro`/`.kicad_sch`/`.kicad_pcb`), a `DESIGN.md`, render `images/`, and an `export/` with BOM, STEP, or schematic PDF output; `OpenRX-Gemini/fab/` additionally holds the ordered gerber/drill set.
 

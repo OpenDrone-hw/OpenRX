@@ -51,7 +51,7 @@ Radio interface and per-variant GPIO assignments, from the target JSON in `share
 | BOOT / button | 9 | 9 | 9 (button) |
 | Max TX power | 13 dBm | 12-22 dBm | 12-22 dBm per radio |
 
-On the LR1121 variants the RF switch and front-end are driven by the radio's own DIO pins, not ESP32-C3 GPIOs: DIO5 = RFX2401C RXEN, DIO6 = RFX2401C TXEN, DIO7 = SKY13373 V1, DIO8 = SKY13373 V2. Each `radio_rfsw_ctrl` byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch`; the decode table is in [FLASHING.md](FLASHING.md) section 9.
+ 9.
 
 ## Firmware targets
 
@@ -64,7 +64,7 @@ The ExpressLRS hardware-target definitions live in this repo (`shared/elrs-targe
 | Mono | OpenRX Mono Dual Band RX | `Unified_ESP32C3_LR1121_RX` | esp32-c3 | UART, Wi-Fi, Betaflight |
 | Gemini | OpenRX Gemini XrossBand RX | `Unified_ESP32C3_LR1121_RX` | esp32-c3 | UART, Wi-Fi, Betaflight |
 
-Minimum ExpressLRS version **3.5.0**. Hardware pin maps live in the per-variant target JSON. Mono and Gemini currently require the ExpressLRS fork branch described in [FLASHING.md](FLASHING.md) section 10 (TCXO enable and Gemini reset/CS handling); stock unified firmware runs the SX1281 variants.
+ts.
 
 ## Libraries
 
@@ -74,7 +74,7 @@ Symbols and footprints are embedded in the design files. The project lib tables 
 
 
 
-- **2026-08-05**: hardware validated, all four variants. OSHWA certification (BE000030 to BE000033), FLASHING.md flashing and debug guide, Lite/Lite-UFL ELRS target pin remap, Mono/Gemini target updates, shared Incutec KiCad-Library submodule wired (2026-08-04).
+cutec KiCad-Library submodule wired (2026-08-04).
 - **2026-06-10**: combined `OpenRX-all` fabrication set ordered at JLCPCB (gerbers, BOM, CPL in `OpenRX-Gemini/`).
 - **2026-06-07**: single-source-of-truth docs pass, standardized board renders.
 - **2026-03-23**: initial repo, 6-receiver lineup; later reduced to the four current variants (retired designs in `archive/legacy-projects/`).

@@ -99,7 +99,7 @@ kicad-cli pcb export gerbers -o out/ OpenRX-Lite/OpenRX-Lite.kicad_pcb
 
 ## Manufacturing
 
-Fabricated and assembled at JLCPCB: 6-layer, 1.0 mm boards, LCSC parts. The validated build was ordered as the combined `OpenRX-all` board (all four variants on one PCB): gerbers in `OpenRX-Gemini/fab/`, BOM and placement in `OpenRX-Gemini/export/`. Revision history: [CHANGELOG.md](CHANGELOG.md).
+Fabricated and assembled at JLCPCB: 6-layer, 1.0 mm boards, LCSC parts. The validated build was ordered as the combined `OpenRX-all` board (all four variants on one PCB): gerbers in `OpenRX-Gemini/fab/`, BOM and placement in `OpenRX-Gemini/export/`. Revision history: the Revisions section of DESIGN.md.
 
 ## Contributing
 

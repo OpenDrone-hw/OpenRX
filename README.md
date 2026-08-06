@@ -1,6 +1,6 @@
 # OpenRX
 
-Open-source **ExpressLRS (ELRS) receiver** line for FPV/RC, part of the incutec OpenDrone line. Four board variants share an **Espressif ESP32-C3** core, a TLV75533 3.3 V LDO, and the ExpressLRS unified firmware; they differ in radio IC, frequency band, RF front-end, and ELRS antenna. All four are 6-layer boards designed in KiCad 10 for JLCPCB assembly. Family design detail: [DESIGN.md](DESIGN.md). Per-variant notes: `OpenRX-<variant>/DESIGN.md`. Flashing and debug: [FLASHING.md](FLASHING.md).
+Open-source **ExpressLRS (ELRS) receiver** line for FPV/RC, part of the incutec OpenDrone line. Four board variants share an **Espressif ESP32-C3** core, a TLV75533 3.3 V LDO, and the ExpressLRS unified firmware; they differ in radio IC, frequency band, RF front-end, and ELRS antenna. All four are 6-layer boards designed in KiCad 10 for JLCPCB assembly. Family design detail: [DESIGN.md](DESIGN.md). Per-variant notes: `OpenRX-<variant>/DESIGN.md`.
 
 | | | | |
 |:---:|:---:|:---:|:---:|
@@ -11,8 +11,9 @@ Open-source **ExpressLRS (ELRS) receiver** line for FPV/RC, part of the incutec 
 
 ## Status
 
-**Hardware validated**, 2026-08-05, all four variants (Lite, Lite-UFL, Mono, Gemini).
-Latest fabrication set is the combined `OpenRX-all` board (ordered 2026-06-10), tracked in `OpenRX-Gemini/fab/` and `OpenRX-Gemini/export/`.
+**Hardware validated**, 2026-08-05, all four variants (Lite, Lite-UFL, Mono, Gemini), on the combined `OpenRX-all` build ordered 2026-06-10.
+
+The only fabricated set is that 2026-06-10 `OpenRX-all` order, tracked in `OpenRX-Gemini/fab/` and `OpenRX-Gemini/export/`. The four per-variant layouts have since diverged from it: commit 5cd885c (2026-08-05) reworked the clock 3.3 V supply, enlarged pads, and grew the Lite, Lite-UFL and Mono outlines by 1.0 mm. Those changes have not been fabricated, and `OpenRX-Gemini/fab/` has not been re-panelised from them.
 
 ## Certification
 
@@ -48,7 +49,7 @@ Build video: [How LoRa (ExpressLRS) Drone Receivers Work](https://www.youtube.co
 | ELRS antenna | Chip antenna (AE2) | U.FL (J1) | U.FL (J1) | 2x U.FL (J1, J2) |
 | RF front-end | Band-pass filter | Band-pass filter | PA/LNA + RF switch + balun + BPF | 2x (PA/LNA + RF switch + balun + BPF) |
 | Max TX power | 13 dBm | 13 dBm | 12-22 dBm | 12-22 dBm per radio |
-| Board size | 10.0 x 10.5 mm | 10.0 x 10.5 mm | 10.0 x 16.3 mm | 17.0 x 15.7 mm |
+| Board size | 10.0 x 11.5 mm | 10.0 x 11.5 mm | 10.0 x 17.3 mm | 17.0 x 15.7 mm |
 | PCB | 6-layer, 1.0 mm | 6-layer, 1.0 mm | 6-layer, 1.0 mm | 6-layer, 1.0 mm |
 
 Common to all variants: ESP32-C3 MCU, 5 V pad input, CRSF over UART0, WS2812B status LED, dedicated 2.4 GHz Wi-Fi chip antenna for OTA. Part-level detail (LDO, clocks, RF chains, pads, pin maps, firmware targets) is in [DESIGN.md](DESIGN.md).
@@ -65,14 +66,13 @@ Common to all variants: ESP32-C3 MCU, 5 V pad input, CRSF over UART0, WS2812B st
 | `shared/sheets/` | Shared hierarchical sheet (RX core, legacy) |
 | `shared/elrs-targets/` | ExpressLRS hardware-target JSON + `targets_entries.json` |
 | `libs/KiCad-Library` | Shared Incutec symbol/footprint/3D library (git submodule) |
-| `images/` | Board renders and certification marks |
-| `exports/` | Schematic PDFs (per variant + ELRS-team drops) |
+| `images/` | Board renders (all variants) and certification marks |
+| `exports/schematics/` | Schematic PDFs, one per variant |
 | `verification/` | BOM and design-verification scripts |
 | `archive/legacy-projects/` | Retired designs (Nano, 900, PWM, Dual) |
 | `DESIGN.md` | Family design notes |
-d debug guide |
 
-Each variant directory holds the KiCad project (`.kicad_pro`/`.kicad_sch`/`.kicad_pcb`), a `DESIGN.md`, render `images/`, and an `export/` with BOM, STEP, or schematic PDF output; `OpenRX-Gemini/fab/` additionally holds the ordered gerber/drill set.
+Each variant directory holds the KiCad project (`.kicad_pro`/`.kicad_sch`/`.kicad_pcb`), a `DESIGN.md`, and an `export/` with BOM or STEP output; `OpenRX-Gemini/fab/` additionally holds the ordered gerber/drill set. Board renders live only in the root `images/`, one set for all four variants.
 
 ## Design entry points
 
@@ -81,7 +81,7 @@ Each variant directory holds the KiCad project (`.kicad_pro`/`.kicad_sch`/`.kica
 - **Gemini**: `OpenRX-Gemini/OpenRX-Gemini.kicad_sch` (top) -> `esp32-c3.kicad_sch` + `clock.kicad_sch` + `lr1121.kicad_sch` (instantiated twice)
 - Board layouts: `OpenRX-<variant>/OpenRX-<variant>.kicad_pcb`, 6 copper layers; combined production board `OpenRX-Gemini/OpenRX-all.kicad_pcb`
 
-Symbols and footprints are embedded in the design files, so the schematics and boards open without any external library. The project lib tables reference the in-repo `shared/libs/OpenRX-Shared.*` library plus the shared `Incutec` library from the `libs/KiCad-Library` submodule, used for new parts. Passives and some packages (coax connectors, QFNs) use stock KiCad library footprints that resolve through their embedded copies. Symbols carry an `LCSC` property for JLCPCB BOM export.
+Clone with `--recursive` so the `libs/KiCad-Library` submodule is present. Library layout and symbol/footprint sourcing: the [Libraries](DESIGN.md#libraries) section of DESIGN.md.
 
 ## Build and export
 
@@ -99,7 +99,7 @@ kicad-cli pcb export gerbers -o out/ OpenRX-Lite/OpenRX-Lite.kicad_pcb
 
 ## Manufacturing
 
-Fabricated and assembled at JLCPCB: 6-layer, 1.0 mm boards, LCSC parts. The validated build was ordered as the combined `OpenRX-all` board (all four variants on one PCB): gerbers in `OpenRX-Gemini/fab/`, BOM and placement in `OpenRX-Gemini/export/`. Revision history: the Revisions section of DESIGN.md.
+Fabricated and assembled at JLCPCB: 6-layer, 1.0 mm boards, LCSC parts. The validated build was ordered as the combined `OpenRX-all` board (all four variants on one PCB): gerbers in `OpenRX-Gemini/fab/`, BOM and placement in `OpenRX-Gemini/export/`. That set is historical, see [Status](#status); re-export from the current per-variant boards before ordering. Revision history: the Revisions section of DESIGN.md.
 
 ## Contributing
 

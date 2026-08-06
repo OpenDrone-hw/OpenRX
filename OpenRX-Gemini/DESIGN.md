@@ -2,11 +2,13 @@
 
 Dual-LR1121 Gemini/Xrossband receiver. ESP32-C3 + 2x LR1121 + 2x RFX2401C + 2x SKY13373-460LF + 2x Johanson IPD.
 
+Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](../DESIGN.md). This file carries only what is specific to the Gemini.
+
 ## Board preview
 
 | Front | Back |
 |-------|------|
-| ![Front](images/front.png) | ![Back](images/back.png) |
+| ![Front](../images/openrx-gemini-front.png) | ![Back](../images/openrx-gemini-back.png) |
 
 ## Schematic
 
@@ -20,17 +22,15 @@ Dual-LR1121 Gemini/Xrossband receiver. ESP32-C3 + 2x LR1121 + 2x RFX2401C + 2x S
 
 ## Firmware
 
-- ELRS target: `Unified_ESP32C3_LR1121_RX` (same binary as the Mono)
-- Hardware JSON: `/shared/elrs-targets/OpenRX Gemini LR1121.json`
+Same binary as the Mono. ELRS target, platform, upload methods and pin map: the [Firmware targets](../DESIGN.md#firmware-targets) and [Pin map](../DESIGN.md#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Gemini LR1121.json`. Gemini-specific settings in that JSON:
+
 - `radio_nss_2` enables dual-radio mode; radio 2 pins NSS 7, RST 10, BUSY 8, DIO1 18
-- `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`, same as the Mono (decode table there)
-- Requires the ExpressLRS fork branch: TCXO enable, radio-1 second reset (NRESET on strapping pin GPIO 2), software chip-select for radio-1 NSS on GPIO 0. See [../FLASHING.md](../FLASHING.md) section 10.
+- `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`, same as the Mono ([decode table](../OpenRX-Mono/DESIGN.md#rfsw_ctrl-decode))
+- Requires the ExpressLRS fork branch: TCXO enable, radio-1 second reset (NRESET on strapping pin GPIO 2), and software chip-select for radio-1 NSS on GPIO 0
 
 ## Flash interface
 
-- Pads: `5V`, `GND`, `RX`, `TX`
-- BOOT: tactile button (U9, TS2306A) on GPIO 9; hold during power-up for UART download mode
-- Wi-Fi OTA after first flash. Full procedures: [../FLASHING.md](../FLASHING.md)
+Pads are the family default: [I/O pads and button](../DESIGN.md#io-pads-and-button). Gemini delta: BOOT is a tactile button (U9, TS2306A) on GPIO 9 instead of the TP5 pad, held during power-up for UART download mode.
 
 ## Sourcing
 

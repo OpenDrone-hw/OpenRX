@@ -2,11 +2,13 @@
 
 Single-LR1121 dual-band receiver. ESP32-C3 + LR1121 (U3) + RFX2401C PA/LNA (U4) + SKY13373-460LF RF switch (U5) + Johanson 0900PC16J0042001E balun/IPD (T1).
 
+Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](../DESIGN.md). This file carries only what is specific to the Mono.
+
 ## Board preview
 
 | Front | Back |
 |-------|------|
-| ![Front](images/front.png) | ![Back](images/back.png) |
+| ![Front](../images/openrx-mono-front.png) | ![Back](../images/openrx-mono-back.png) |
 
 ## Schematic
 
@@ -32,11 +34,11 @@ Filter pin 1 (chipset side) is 40 ohm, designed for SX1280/SX1281. LR1121 RFIO_H
 
 ## Firmware
 
-- ELRS target: `Unified_ESP32C3_LR1121_RX`
-- Hardware JSON: `/shared/elrs-targets/OpenRX Mono LR1121.json`
+ELRS target, platform, upload methods and pin map: the [Firmware targets](../DESIGN.md#firmware-targets) and [Pin map](../DESIGN.md#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Mono LR1121.json`. Mono-specific settings in that JSON:
+
 - `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`; each byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch` (bit0 = DIO5 RXEN, bit1 = DIO6 TXEN, bit2 = DIO7 V1, bit3 = DIO8 V2)
 - `radio_dcdc: true`
-- Requires the ExpressLRS fork branch (TCXO enable via `SetTcxoMode`): see [../FLASHING.md](../FLASHING.md) sections 1 and 10
+- Requires the ExpressLRS fork branch that enables the TCXO via `SetTcxoMode`; stock unified firmware does not bring up the 32 MHz TCXO on this board
 
 ### rfsw_ctrl decode
 
@@ -51,25 +53,9 @@ Filter pin 1 (chipset side) is 40 ohm, designed for SX1280/SX1281. LR1121 RFIO_H
 | 6 | unused | 0 | - | - | - | - |
 | 7 | 2.4 GHz RX | 5 | 1 | 0 | 1 | 0 |
 
-### GPIO map
-
-| GPIO | Function |
-|---|---|
-| 1 | IRQ (DIO1) |
-| 2 | RST |
-| 3 | BUSY |
-| 4 | MOSI |
-| 5 | MISO |
-| 6 | SCK |
-| 7 | NSS |
-| 8 | LED |
-| 9 | BOOT |
-
 ## Flash interface
 
-- Pads: `5V`, `GND`, `RX`, `TX`
-- `BOOT` pad (TP5): short to GND during power-up to enter UART download mode (no button on the Mono)
-- Wi-Fi OTA after first flash. Full procedures: [../FLASHING.md](../FLASHING.md)
+Pads and BOOT behaviour are the family default: [I/O pads and button](../DESIGN.md#io-pads-and-button). The Mono has no boot button, only the TP5 pad.
 
 ## Sourcing
 

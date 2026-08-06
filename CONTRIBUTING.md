@@ -28,8 +28,8 @@ library tables reference for shared parts. Edit in KiCad; never text-edit
 - ERC and DRC clean on every board you touched:
 
 ```
-kicad-cli sch erc --exit-code-violations hardware/<board>.kicad_sch
-kicad-cli pcb drc --exit-code-violations hardware/<board>.kicad_pcb
+kicad-cli sch erc --exit-code-violations OpenRX-<variant>/OpenRX-<variant>.kicad_sch
+kicad-cli pcb drc --exit-code-violations OpenRX-<variant>/OpenRX-<variant>.kicad_pcb
 ```
 
 - Post before and after board renders in the pull request. A text diff of a

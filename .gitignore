@@ -4,6 +4,7 @@ __MACOSX/
 
 # Redundant zip archives of directories already committed
 firmware-handoff.zip
+**/fab/*.zip
 
 # KiCad backup and autosave
 *-backups/
@@ -36,7 +37,7 @@ replicate_layout.log
 **/production/
 
 # Vendor datasheet cache (local only, not distributed)
-/datasheets/
+datasheets/
 
 # Generated files
 **/netlist.xml

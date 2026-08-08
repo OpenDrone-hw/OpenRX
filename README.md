@@ -86,7 +86,7 @@ Clone with `--recursive` so the `libs/KiCad-Library` submodule is present. Libra
 ## Build and export
 
 ```
-git clone --recursive https://github.com/incutec-hw/OpenRX.git
+git clone --recursive https://github.com/OpenDrone-hw/OpenRX.git
 ```
 
 Open a variant's `.kicad_pro` in KiCad 10. Production exports (gerbers, BOM, CPL) are generated with the [KiCad Fabrication Toolkit](https://github.com/bennymeg/Fabrication-Toolkit) plugin, using the tracked per-variant `fabrication-toolkit-options.json`. Headless checks and exports use `kicad-cli`:

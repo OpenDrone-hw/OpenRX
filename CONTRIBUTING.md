@@ -1,5 +1,17 @@
 # Contributing
 
+## Talk to us first
+
+Before you open an issue, start a project, or write any code or CAD, bring the
+idea to the Discord server and tag the developers:
+
+https://discord.gg/v3sWmTcx3R
+
+Say what you want to change and why. Someone may already be working on it, the
+board may be held by another contributor, or the change may clash with a
+production run that is already committed. A short conversation there saves a
+pull request that cannot be merged.
+
 ## Before you edit a board
 
 KiCad files cannot be merged. If two people edit the same `.kicad_pcb`, one of
@@ -16,7 +28,7 @@ A pull request touching a file locked by someone else gets closed, not merged.
 ## Setup
 
 ```
-git clone --recursive https://github.com/incutec-hw/OpenRX.git
+git clone --recursive https://github.com/OpenDrone-hw/OpenRX.git
 ```
 
 KiCad 10. The `--recursive` flag pulls `libs/KiCad-Library`, which the project
@@ -41,7 +53,7 @@ kicad-cli pcb drc --exit-code-violations OpenRX-<variant>/OpenRX-<variant>.kicad
 Add new symbols, footprints and 3D models to this repo's local libraries.
 That is the working default.
 
-[incutec-hw/KiCad-Library](https://github.com/incutec-hw/KiCad-Library) is a
+[OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) is a
 mirror of parts we already use or stock. Check it first: if the part is there,
 we have used it before, which saves sourcing work. Promoting a part into it is
 a separate deliberate step, not a requirement for contributing here.

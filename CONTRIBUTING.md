@@ -1,5 +1,17 @@
 # Contributing
 
+## Talk to us first
+
+Before you open an issue, start a project, or write any code or CAD, bring the
+idea to the Discord server and tag the developers:
+
+https://discord.gg/v3sWmTcx3R
+
+Say what you want to change and why. Someone may already be working on it, the
+board may be held by another contributor, or the change may clash with a
+production run that is already committed. A short conversation there saves a
+pull request that cannot be merged.
+
 ## Before you edit a board
 
 KiCad files cannot be merged. If two people edit the same `.kicad_pcb`, one of

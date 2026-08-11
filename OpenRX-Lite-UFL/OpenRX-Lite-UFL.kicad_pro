@@ -576,7 +576,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -590,7 +590,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "",
+    "bom_export_filename": "fab/OpenRX-Gemini.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -652,12 +652,54 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part_1",
+          "name": "LCSC Part_1",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -729,8 +771,8 @@
     "DOC_MCU": "ESP32-C3 (QFN-32)",
     "DOC_NAME": "OpenRX-Lite-UFL",
     "DOC_PROTOCOL": "CRSF",
-    "DOC_RATING": "5 V pad in \u2192 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
-    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver \u2014 SX1281, U.FL antenna, 6-layer",
+    "DOC_RATING": "5 V pad in → 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
+    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver — SX1281, U.FL antenna, 6-layer",
     "DOC_VARIANT": "2.4 GHz U.FL"
   },
   "tuning_profiles": {

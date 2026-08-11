@@ -576,7 +576,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -590,7 +590,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "export/OpenRX-Gemini.csv",
+    "bom_export_filename": "fab/OpenRX-Gemini.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",

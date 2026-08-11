@@ -576,7 +576,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -590,7 +590,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "export/OpenRX-Lite.csv",
+    "bom_export_filename": "fab/OpenRX-Lite.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -771,8 +771,8 @@
     "DOC_MCU": "ESP32-C3 (QFN-32)",
     "DOC_NAME": "OpenRX-Lite",
     "DOC_PROTOCOL": "CRSF",
-    "DOC_RATING": "5 V pad in \u2192 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
-    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver \u2014 SX1281, ceramic chip antenna, 6-layer",
+    "DOC_RATING": "5 V pad in → 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
+    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver — SX1281, ceramic chip antenna, 6-layer",
     "DOC_VARIANT": "2.4 GHz ceramic"
   },
   "tuning_profiles": {

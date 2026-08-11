@@ -35,6 +35,7 @@ replicate_layout.log
 
 # Production output (generated, re-exportable)
 **/production/
+**/production-*/
 
 # Vendor datasheet cache (local only, not distributed)
 datasheets/

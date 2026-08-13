@@ -1,66 +1,80 @@
+# OpenDrone canonical .gitignore for hardware repos.
+# Commit design source and intent. Ignore regenerable output, machine-local
+# state and downloadables. Keep this file identical across every repo.
+
 # macOS
 .DS_Store
-__MACOSX/
 
-# Redundant zip archives of directories already committed
-firmware-handoff.zip
-**/fab/*.zip
-
-# KiCad backup and autosave
+# KiCad backups, autosave, locks: regenerable, machine-local
 *-backups/
 *.bak
 *.000
 _autosave-*
 *~
 \#auto_saved_files#
-
-# KiCad generated/local
-*.kicad_prl
-*.kicad_dru
 *.kicad_sch-bak
 *.kicad_pcb-bak
 *.lck
+fp-info-cache
+
+# Per-user view state. Never commit: pure merge-conflict fuel.
+*.kicad_prl
+
+# KiCad regenerable exports
 *.net
 *.rpt
 *.tmp
-fp-info-cache
 replicate_layout.log
-
-# KiCad local history
 **/.history/
 
-# 3D exports (not library files)
-**/.step
-**/*.glb
-
-# Production output (generated, re-exportable)
-**/production/
-**/production-*/
-
-# Vendor datasheet cache (local only, not distributed)
-datasheets/
-
-# Generated files
-**/netlist.xml
-**/schematic_analysis.json
-
-# JLC/sourcing quote drops (per-quote, not source of truth)
-verification/bom/jlc-quote-*.md
-
-# Python
+# Python and local agent state.
+# AGENTS.md is the committed agent file, vendor-neutral on purpose. Anything
+# tool-specific stays local and untracked: symlink it yourself if you want it
+# (ln -s AGENTS.md CLAUDE.md) and git will ignore it.
 __pycache__/
 *.pyc
-
-# Internal notes (not for public repo)
-docs/
-
-# Claude
 .claude/
 CLAUDE.md
+CLAUDE.local.md
+.cursor/
+.cursorrules
+.windsurfrules
+.github/copilot-instructions.md
 
-# firmware handoff artifacts carry bench credentials, keep untracked
-OpenRX-Gemini/firmware-handoff/
+# Machine-specific analysis dumps, re-exportable and path-dependent
+analysis/
+extracted_*.json
+ext2_*.json
+netlist_*.json
+**/pcb.json
+**/schematic.json
+**/tools/.lcsc_mpn_cache.json
 
-# Bench flashing and bringup notes stay local until per-board guides are written
-FLASHING.md
-BRINGUP*.md
+# Datasheets: downloadable, re-synced by the digikey and lcsc skills
+datasheets/
+
+# Working fab exports. For a tagged release, force-add the release set:
+#   git add -f hardware/production/<rev>
+**/production/
+**/*.glb
+
+# STEP fit-check sets ship as GitHub release assets on the rev tag, never as
+# tracked files: the current set is over 100 MB and git would keep a copy of
+# every re-export.
+#
+# Scoped to the export directories on purpose. A blanket *.step would also
+# ignore the 3D models inside lib.3dshapes/, which are committed.
+export/
+exports/
+/hardware/*.step
+**/bom/
+**/*_Paste.dxf
+**/*_Paste.svg
+**/*.kicad_pcb.zip
+stencil_out/
+
+# Committed on purpose, listed here so nobody re-adds them by reflex:
+#   AGENTS.md               the design and agent reference
+#   *.kicad_dru             design intent
+#   fabrication-toolkit-options.json
+#   *.kicad_sym  *.pretty/  *.3dshapes/   project-local libraries

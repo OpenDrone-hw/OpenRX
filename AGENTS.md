@@ -49,7 +49,7 @@ kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations OpenR
 ```
 
 
-Family-level design description of the four OpenRX variants. Values are extracted from the KiCad design files and the ExpressLRS target JSON in `shared/elrs-targets/`. Per-variant RF-chain detail: `OpenRX-<variant>/DESIGN.md`. RF-switch state decode: the [rfsw_ctrl decode](#rfsw_ctrl-decode) table in OpenRX-Mono/DESIGN.md.
+Family-level design description of the four OpenRX variants. Values are extracted from the KiCad design files and the ExpressLRS target JSON in `shared/elrs-targets/`. Per-variant RF-chain detail is in [Variants](#variants) below. RF-switch state decode: [rfsw_ctrl decode](#rfsw_ctrl-decode).
 
 ## Common circuit
 
@@ -99,9 +99,9 @@ Radio interface and per-variant GPIO assignments, from the target JSON in `share
 | Status LED | 8 (GRB) | 8 (GRB) | 19 (GRB) |
 | BOOT / button | 9 | 9 | 9 (button) |
 
-On the LR1121 variants the RF switch and front-end are driven by the radio's own DIO pins, not ESP32-C3 GPIOs: DIO5 = RFX2401C RXEN, DIO6 = RFX2401C TXEN, DIO7 = SKY13373 V1, DIO8 = SKY13373 V2. Each `radio_rfsw_ctrl` byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch`; the decode table is in [OpenRX-Mono/DESIGN.md](#rfsw_ctrl-decode).
+On the LR1121 variants the RF switch and front-end are driven by the radio's own DIO pins, not ESP32-C3 GPIOs: DIO5 = RFX2401C RXEN, DIO6 = RFX2401C TXEN, DIO7 = SKY13373 V1, DIO8 = SKY13373 V2. Each `radio_rfsw_ctrl` byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch`; the decode table is under [rfsw_ctrl decode](#rfsw_ctrl-decode).
 
-Transmit power per variant is in the [Specifications](README.md) table; the authoritative values are `power_values` in the per-variant target JSON.
+Transmit power per variant is in the variant table in the [README](README.md); the authoritative values are `power_values` in the per-variant target JSON.
 
 ## Firmware targets
 
@@ -122,7 +122,7 @@ Symbols and footprints are embedded in the design files. The project lib tables 
 
 ## Revisions
 
-- **2026-08-05**: hardware validated, all four variants. OSHWA certification (BE000030 to BE000033), Lite/Lite-UFL ELRS target pin remap, Mono/Gemini target updates, shared Incutec KiCad-Library submodule wired (2026-08-04). Layout rework (clock 3.3 V supply, enlarged pads, Lite/Lite-UFL and Mono outlines +1.0 mm) landed after the validated build and has not been fabricated.
+- **2026-08-05**: OSHWA certification (BE000030 to BE000033), Lite/Lite-UFL ELRS target pin remap, Mono/Gemini target updates, shared Incutec KiCad-Library submodule wired (2026-08-04). Layout rework (clock 3.3 V supply, enlarged pads, Lite/Lite-UFL and Mono outlines +1.0 mm) landed after the validated build and has not been fabricated.
 - **2026-06-10**: combined `OpenRX-all` fabrication set ordered at JLCPCB (gerbers, BOM, CPL in `OpenRX-Gemini/`).
 - **2026-06-07**: single-source-of-truth docs pass, standardized board renders.
 - **2026-03-23**: initial repo, 6-receiver lineup; later reduced to the four current variants (retired designs in `archive/legacy-projects/`).
@@ -135,7 +135,7 @@ Symbols and footprints are embedded in the design files. The project lib tables 
 
 ESP32-C3 + SX1281, 2.4 GHz only, on-board chip antenna. Same circuit as Lite-UFL, different antenna interface.
 
-Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](#openrx). This file carries only what is specific to the Lite.
+Common circuit, antennas, I/O pads, pin map and firmware targets are shared, see above. This section carries only what is specific to the Lite.
 
 #### Board preview
 
@@ -155,7 +155,7 @@ GPIO 9 pull-up only, no physical switch.
 
 #### Firmware
 
-ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Lite 2400.json`.
+ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections above, sourced from `shared/elrs-targets/OpenRX Lite 2400.json`.
 
 #### Flash interface
 
@@ -173,7 +173,7 @@ Pads and BOOT behaviour are the family default: [I/O pads and button](#io-pads-a
 
 ESP32-C3 + SX1281, 2.4 GHz only, U.FL antenna connector. Same circuit as the Lite, different antenna interface.
 
-Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](#openrx). This file carries only what is specific to the Lite-UFL.
+Common circuit, antennas, I/O pads, pin map and firmware targets are shared, see above. This section carries only what is specific to the Lite-UFL.
 
 #### Board preview
 
@@ -194,7 +194,7 @@ Same as the Lite: GPIO 9 pull-up only, no physical switch.
 
 #### Firmware
 
-Same target as the Lite. ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Lite-UFL 2400.json`.
+Same target as the Lite. ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections above, sourced from `shared/elrs-targets/OpenRX Lite-UFL 2400.json`.
 
 #### Flash interface
 
@@ -212,7 +212,7 @@ Pads and BOOT behaviour are the family default: [I/O pads and button](#io-pads-a
 
 Single-LR1121 dual-band receiver. ESP32-C3 + LR1121 (U3) + RFX2401C PA/LNA (U4) + SKY13373-460LF RF switch (U5) + Johanson 0900PC16J0042001E balun/IPD (T1).
 
-Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](#openrx). This file carries only what is specific to the Mono.
+Common circuit, antennas, I/O pads, pin map and firmware targets are shared, see above. This section carries only what is specific to the Mono.
 
 #### Board preview
 
@@ -244,7 +244,7 @@ Filter pin 1 (chipset side) is 40 ohm, designed for SX1280/SX1281. LR1121 RFIO_H
 
 #### Firmware
 
-ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Mono LR1121.json`. Mono-specific settings in that JSON:
+ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections above, sourced from `shared/elrs-targets/OpenRX Mono LR1121.json`. Mono-specific settings in that JSON:
 
 - `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`; each byte is a DIO5-DIO8 bitmask passed to `SetDioAsRfSwitch` (bit0 = DIO5 RXEN, bit1 = DIO6 TXEN, bit2 = DIO7 V1, bit3 = DIO8 V2)
 - `radio_dcdc: true`
@@ -280,7 +280,7 @@ Pads and BOOT behaviour are the family default: [I/O pads and button](#io-pads-a
 
 Dual-LR1121 Gemini/Xrossband receiver. ESP32-C3 + 2x LR1121 + 2x RFX2401C + 2x SKY13373-460LF + 2x Johanson IPD.
 
-Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md](#openrx). This file carries only what is specific to the Gemini.
+Common circuit, antennas, I/O pads, pin map and firmware targets are shared, see above. This section carries only what is specific to the Gemini.
 
 #### Board preview
 
@@ -293,14 +293,14 @@ Common circuit, antennas, I/O pads, pin map and firmware targets: [../DESIGN.md]
 - Top sheet: `OpenRX-Gemini.kicad_sch` -> `esp32-c3.kicad_sch` + `clock.kicad_sch` + `lr1121.kicad_sch` (instantiated twice). `esp32c3_lr1121_gemini.kicad_sch` is a legacy flat sheet, not in the hierarchy.
 - Radio 1 (U3 LR1121, U4 RFX2401C, U5 SKY13373, T1 IPD, FL1 BPF): RF chain -> `J1` U.FL
 - Radio 2 (U6 LR1121, U7 RFX2401C, U8 SKY13373, T2 IPD, FL2 BPF): mirrors radio 1 -> `J2` U.FL
-- Per-radio 2.4 GHz and sub-GHz paths are identical to the Mono (see [../OpenRX-Mono/DESIGN.md](#openrx-mono)), including the SKY13373 truth table
+- Per-radio 2.4 GHz and sub-GHz paths are identical to the [Mono](#openrx-mono), including the SKY13373 truth table
 - Shared 32 MHz TCXO in `clock.kicad_sch`, powered from radio 2's (U6) VTCXO pin: U6 must initialize first or neither radio has a clock
 - Each radio drives its own switch and front-end: `DIO5 -> RXEN`, `DIO6 -> TXEN`, `DIO7 -> V1`, `DIO8 -> V2`. Wiring is symmetric, so the single `radio_rfsw_ctrl` applies to both radios via `SetDioAsRfSwitch`.
 - In DualBand/X modes the firmware never swaps radios: radio 1 (U3) is always sub-GHz, radio 2 (U6) is always 2.4 GHz. Antennas: `J1` = 900 MHz, `J2` = 2.4 GHz.
 
 #### Firmware
 
-Same binary as the Mono. ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections of ../DESIGN.md, sourced from `shared/elrs-targets/OpenRX Gemini LR1121.json`. Gemini-specific settings in that JSON:
+Same binary as the Mono. ELRS target, platform, upload methods and pin map: the [Firmware targets](#firmware-targets) and [Pin map](#pin-map) sections above, sourced from `shared/elrs-targets/OpenRX Gemini LR1121.json`. Gemini-specific settings in that JSON:
 
 - `radio_nss_2` enables dual-radio mode; radio 2 pins NSS 7, RST 10, BUSY 8, DIO1 18
 - `radio_rfsw_ctrl: [15, 0, 12, 8, 8, 6, 0, 5]`, same as the Mono ([decode table](#rfsw_ctrl-decode))

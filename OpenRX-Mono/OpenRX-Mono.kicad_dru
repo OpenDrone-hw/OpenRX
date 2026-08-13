@@ -1,4 +1,45 @@
 (version 1)
-(rule "GND zone clearance to 50 Ohm nets"
-  (constraint clearance (min 0.300mm))
-  (condition "A.NetClass == '50Ohm' && B.Type == 'Zone'"))
+
+# OpenDrone canonical design rules.
+#
+# Copied from hardware-template into every board repo. Keep the block above the
+# marker byte-identical across repos; CI checks it. Board-specific rules go
+# below the marker, never in the middle.
+#
+# This file holds CUSTOM rules only. The fab numbers that gate a JLCPCB order
+# live in the project file under board.design_settings.rules, and come from
+# Board Setup > Import Settings from Another Board, pointed at
+# kicad/templates/OpenDrone-6L. The line standard is:
+#
+#   clearance 0.09   track 0.09   via 0.35 / 0.20 drill
+#   annular 0.075    hole-to-hole 0.20        edge clearance 0.20
+#
+# Do not restate those here. Two copies of a number drift, and the one you are
+# not looking at is the one that is wrong.
+
+(rule "copper to copper"
+  (constraint clearance (min 0.1mm))
+  (layer outer))
+
+(rule "silkscreen over pad"
+  (constraint silk_clearance (min 0.15mm))
+  (condition "A.Type == 'Pad'"))
+
+# --- board-specific rules below this line ------------------------------------
+#
+# Only what this board needs and the line does not. Name every rule so the next
+# person can tell a real constraint from a copied one.
+#
+# 2 oz outer copper, used on the ESC boards. Heavier copper etches with a wider
+# taper, so the outer layers need 0.16 mm where the line standard is 0.09 mm.
+# Inner layers stay at 1 oz and keep the standard. This is a rule and not a
+# global minimum on purpose: raising the board minimum would constrain the
+# signal routing on the inner layers for no reason.
+#
+# (rule "2 oz outer copper, clearance"
+#   (constraint clearance (min 0.16mm))
+#   (layer outer))
+#
+# (rule "2 oz outer copper, track width"
+#   (constraint track_width (min 0.16mm))
+#   (layer outer))

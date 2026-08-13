@@ -1,3 +1,21 @@
-*.kicad_pcb -text lockable
-*.kicad_sch -text lockable
-*.kicad_pro -text lockable
+# -text disables end-of-line normalisation. KiCad writes these files itself;
+# rewriting line endings on checkout produces whole-file diffs on the wrong
+# platform.
+#
+# These files cannot be merged. Who is editing which board is settled by
+# talking to each other, not by tooling.
+*.kicad_pcb   -text
+*.kicad_sch   -text
+*.kicad_pro   -text
+
+# Binary, so git does not attempt a text diff.
+*.step   binary
+*.stp    binary
+*.wrl    binary
+*.glb    binary
+*.png    binary
+*.pdf    binary
+
+# Keep the submodule and the render set out of the repo language statistics.
+libs/**     linguist-vendored
+images/**   linguist-documentation

@@ -638,6 +638,137 @@
 	)
 	(footprint "OpenRX-Shared:SolderPad_1.2x2.0mm"
 		(layer "F.Cu")
+		(uuid "1620176d-851b-4e51-a5d3-74e54c5a74a7")
+		(at 1.125 2.425)
+		(descr "Solder pad 1.2x2.0mm with 25% corner radius, 2.0mm pitch compatible")
+		(tags "solder pad connector CRSF ELRS")
+		(property "Reference" "TP3"
+			(at 0 -3 0)
+			(layer "F.SilkS")
+			(uuid "66f20258-5665-410d-b121-6d0b0c369132")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "5V"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "0067bbda-f004-4d6d-afc3-be825b3374a1")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.06)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f088953-ca62-43eb-a6c6-8ed469add04d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "edfa0852-65ef-4de0-87ef-1051a372ed5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Pin* Test*")
+		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/eb800128-80f7-4ddf-a030-36864919baca")
+		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")
+		(sheetfile "esp32c3_sx1281_lite.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.1 -2.4)
+			(end 1.1 2.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6b2ee9e4-27b2-4ced-8cdc-d908f48f99af")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "+5V")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "12c2ad74-5f47-444d-bbb7-a884a35d11eb")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "+5V")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "7bcd70d0-5cf1-4db5-b6ab-8eaceeb2b63a")
+		)
+		(pad "1" thru_hole roundrect
+			(at 0 0)
+			(size 1.9 4.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.25)
+			(net "+5V")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "bc382bb1-af73-4e8f-ab1e-eb4a6d539f86")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "+5V")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "84b62f50-d3e8-4c7c-8139-86704656fb58")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "+5V")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "d60bc5b2-c6a0-4354-ab4a-75873c9fab9c")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "OpenRX-Shared:SolderPad_1.2x2.0mm"
+		(layer "F.Cu")
 		(uuid "2657852a-a306-4fc6-8a18-df48bc9b2084")
 		(at 109.16 108.05)
 		(descr "Solder pad 1.2x2.0mm with 25% corner radius, 2.0mm pitch compatible")
@@ -712,6 +843,137 @@
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "883a2fbd-3465-4d52-973e-1e7c5c0c8938")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "OpenRX-Shared:SolderPad_1.2x2.0mm"
+		(layer "F.Cu")
+		(uuid "2c8e5a6f-bd2e-4be0-a402-cb1d075c60bd")
+		(at 4.375 2.425)
+		(descr "Solder pad 1.2x2.0mm with 25% corner radius, 2.0mm pitch compatible")
+		(tags "solder pad connector CRSF ELRS")
+		(property "Reference" "TP4"
+			(at 0 -3 0)
+			(layer "F.SilkS")
+			(uuid "d438a085-ce5b-46f0-9424-bf6fc0a742a6")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "031d3807-ccb1-4c8a-a643-9836016d9cbd")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.06)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e6aa8449-c913-4e71-929a-f2d43d99bb06")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ac099b86-7714-4c9a-aaa8-d9bcf9389d2a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Pin* Test*")
+		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/2adff0ae-c737-4855-a5ef-54dbe5ccbdd1")
+		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")
+		(sheetfile "esp32c3_sx1281_lite.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.1 -2.4)
+			(end 1.1 2.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "0d649e3c-4dea-45f0-acd8-bd0d9241ccd3")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "e5228765-95bb-409f-a757-897e538c34bf")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "adab4c46-8b7e-4264-88ff-a000190467d4")
+		)
+		(pad "1" thru_hole roundrect
+			(at 0 0)
+			(size 1.9 4.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.25)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "8c5998a9-e319-4002-be38-ed1d3b1d35ec")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "8217e404-2d5d-4f11-a5bc-b1da9aa96b3f")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "GND")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "6a5003fb-eb4f-423e-b4fb-65491b1ae227")
 		)
 		(embedded_fonts no)
 	)
@@ -1347,7 +1609,7 @@
 			(at 0 -3 0)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "96da03c4-2219-471a-b0dd-bcc4cffe5b96")
+			(uuid "64a9a9d6-1a59-4d1e-bf2e-6f046bc470c5")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -1358,7 +1620,7 @@
 		(property "Value" "TX"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "667d3732-57d3-4aa5-8cf2-148f8080f608")
+			(uuid "07753fa0-c434-4411-b409-ed64188afb8a")
 			(effects
 				(font
 					(size 0.5 0.5)
@@ -1370,18 +1632,18 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0b9fb2c2-6a24-4c66-8697-70ffce5fbd08")
+			(uuid "e27678a2-ed0b-48c8-bf96-748200a3e251")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d57f967e-f2b9-429f-ab4c-667bc4e96ba2")
+			(uuid "586ae911-1513-4083-a559-54bb74d15282")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1392,6 +1654,12 @@
 		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/f8aa056d-6e0c-4a4f-8f1b-7068ba9d6e79")
 		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")
 		(sheetfile "esp32c3_sx1281_lite.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
@@ -1411,6 +1679,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0TXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "fb5b2e3f-ed88-4bc5-8155-a6fdd4b20897")
 		)
 		(pad "1" thru_hole circle
@@ -1419,6 +1690,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0TXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "eaaa5581-13d1-454f-81e1-97fc179be1b0")
 		)
 		(pad "1" thru_hole roundrect
@@ -1439,6 +1713,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0TXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "55e5bc3d-40d1-4b34-a3cc-5e5a9531aa29")
 		)
 		(pad "1" thru_hole circle
@@ -1447,6 +1724,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0TXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "c0ddb2a1-fa7c-4159-99e5-dccd29fc0376")
 		)
 		(embedded_fonts no)
@@ -2325,7 +2605,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2340,6 +2620,12 @@
 		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/c20eea41-fc44-4bc8-9577-7d7d48eed05f")
 		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")
 		(sheetfile "esp32c3_sx1281_lite.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
@@ -2359,6 +2645,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0RXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "ebb54d6d-810c-46d9-8cfb-d25f6c89c26b")
 		)
 		(pad "1" thru_hole circle
@@ -2367,6 +2656,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0RXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "42dcb9a0-3c46-43d6-8206-af0309865124")
 		)
 		(pad "1" thru_hole roundrect
@@ -2387,6 +2679,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0RXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "cfc4e051-8f5f-4771-b8a0-701bcc10e13f")
 		)
 		(pad "1" thru_hole circle
@@ -2395,6 +2690,9 @@
 			(drill 0.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
+			(net "Net-(U1-U0RXD)")
+			(pinfunction "1_1")
+			(pintype "passive")
 			(uuid "291b8981-1758-407b-bed1-6d6247329e06")
 		)
 		(embedded_fonts no)
@@ -4596,6 +4894,137 @@
 			)
 		)
 	)
+	(footprint "OpenRX-Shared:SolderPad_1.2x2.0mm"
+		(layer "F.Cu")
+		(uuid "fb98ff24-263d-4972-82ba-af0cb7bce5d6")
+		(at 7.625 2.425)
+		(descr "Solder pad 1.2x2.0mm with 25% corner radius, 2.0mm pitch compatible")
+		(tags "solder pad connector CRSF ELRS")
+		(property "Reference" "TP5"
+			(at 0 -3 0)
+			(layer "F.SilkS")
+			(uuid "1de82659-40b8-4073-9bf3-50d52f1f4b72")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.12)
+				)
+			)
+		)
+		(property "Value" "BOOT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "9ef6f81b-36d1-4be4-a5db-774891ebf0d6")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.06)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ff11462d-346c-4f3a-bc35-24f5df635612")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "962d4c8f-bb8b-464e-9645-fcbc8b0e0720")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Pin* Test*")
+		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/21bdf0a4-0d45-4d1b-8050-4665c7155828")
+		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")
+		(sheetfile "esp32c3_sx1281_lite.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -1.1 -2.4)
+			(end 1.1 2.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d892d46b-2618-4528-83f3-6a3c1a0cac9c")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/ESP32-C3 + SX1281 Core (UFL)/BOOT")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "ec6f0a7a-692c-42aa-90a9-ea124b6b0f0e")
+		)
+		(pad "1" thru_hole circle
+			(at -0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/ESP32-C3 + SX1281 Core (UFL)/BOOT")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "0e2fd638-7ff3-4d94-8b8b-6ba88f9ed468")
+		)
+		(pad "1" thru_hole roundrect
+			(at 0 0)
+			(size 1.9 4.5)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(roundrect_rratio 0.25)
+			(net "/ESP32-C3 + SX1281 Core (UFL)/BOOT")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "ff13a26c-c375-44dd-9592-9e52bf1aa091")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 -1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/ESP32-C3 + SX1281 Core (UFL)/BOOT")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "bf30845a-c1c4-4e9c-a2e5-8232c07cafd8")
+		)
+		(pad "1" thru_hole circle
+			(at 0.5 1.2)
+			(size 0.6 0.6)
+			(drill 0.4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/ESP32-C3 + SX1281 Core (UFL)/BOOT")
+			(pinfunction "1_1")
+			(pintype "passive")
+			(uuid "2186d4b0-29fa-4217-af28-ca61c67ae25c")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "007c6ae7-7298-4143-8392-e5990379844c")
@@ -4834,8 +5263,8 @@
 		(units
 			(unit
 				(name "A")
-				(pins "6" "8" "14" "15" "16" "25" "26" "28" "27" "4" "5" "29" "30" "3"
-					"2" "11" "17" "33" "18" "31" "32" "1" "7" "9" "10" "12" "13" "19" "20"
+				(pins "6" "8" "14" "15" "16" "25" "26" "28" "27" "4" "5" "29" "30" "2"
+					"3" "11" "17" "33" "18" "31" "32" "1" "7" "9" "10" "12" "13" "19" "20"
 					"21" "22" "23" "24"
 				)
 			)

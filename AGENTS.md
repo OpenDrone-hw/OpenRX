@@ -16,7 +16,7 @@ radio IC, frequency band, RF front end and antenna interface. All four are
 | Variants | `OpenRX-Lite/`, `OpenRX-Lite-UFL/`, `OpenRX-Mono/`, `OpenRX-Gemini/` |
 | Shared | `shared/sheets/` hierarchical sheets, `shared/libs/`, `shared/elrs-targets/` firmware target JSON |
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), catalogue only; every library this board uses is local to the repo |
-| Archive | `archive/legacy-projects/` holds five superseded designs. Historical record, not maintained |
+| Archive | Five superseded designs live in git history (removed from the tip 2026-08-14, last at `archive/legacy-projects/`) |
 | License | CERN-OHL-S-2.0 |
 
 Each variant directory sits exactly one level below the repo root, which is what
@@ -125,7 +125,7 @@ Symbols and footprints are embedded in the design files. The project lib tables 
 - **2026-08-05**: OSHWA certification (BE000030 to BE000033), Lite/Lite-UFL ELRS target pin remap, Mono/Gemini target updates, shared Incutec KiCad-Library submodule wired (2026-08-04). Layout rework (clock 3.3 V supply, enlarged pads, Lite/Lite-UFL and Mono outlines +1.0 mm) landed after the validated build and has not been fabricated.
 - **2026-06-10**: combined `OpenRX-all` fabrication set ordered at JLCPCB (gerbers, BOM, CPL in `OpenRX-Gemini/`).
 - **2026-06-07**: single-source-of-truth docs pass, standardized board renders.
-- **2026-03-23**: initial repo, 6-receiver lineup; later reduced to the four current variants (retired designs in `archive/legacy-projects/`).
+- **2026-03-23**: initial repo, 6-receiver lineup; later reduced to the four current variants (retired designs in git history, formerly `archive/legacy-projects/`).
 
 
 ## Variants

@@ -80,9 +80,6 @@ stencil_out/
 #   *.kicad_sym  *.pretty/  *.3dshapes/   project-local libraries
 
 # --- repo-specific, below the canonical block ---------------------------------
-# Bench flashing and bringup notes stay local until per-board guides exist
-FLASHING.md
-BRINGUP*.md
 # Firmware handoff bundles are shared out-of-band, not tracked
 OpenRX-Gemini/firmware-handoff/
 OpenRX-Gemini/firmware-handoff.zip

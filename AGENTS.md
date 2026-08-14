@@ -9,7 +9,7 @@ radio IC, frequency band, RF front end and antenna interface. All four are
 
 | | |
 |---|---|
-| Maintainer | @Just4Stan. Taken over from @bastian2001 on 2026-08-11 |
+| Maintainer | @bastian2001 |
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | Layout | Multi-variant. One directory per variant at repo root, each with its own KiCad project |

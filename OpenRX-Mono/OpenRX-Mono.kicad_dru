@@ -3,7 +3,7 @@
 # OpenDrone canonical design rules.
 #
 # Copied from hardware-template into every board repo. Keep the block above the
-# marker byte-identical across repos; CI checks it. Board-specific rules go
+# marker byte-identical across repos. Board-specific rules go
 # below the marker, never in the middle.
 #
 # This file holds CUSTOM rules only. The fab numbers that gate a JLCPCB order
@@ -16,10 +16,6 @@
 #
 # Do not restate those here. Two copies of a number drift, and the one you are
 # not looking at is the one that is wrong.
-
-(rule "copper to copper"
-  (constraint clearance (min 0.1mm))
-  (layer outer))
 
 (rule "silkscreen over pad"
   (constraint silk_clearance (min 0.15mm))

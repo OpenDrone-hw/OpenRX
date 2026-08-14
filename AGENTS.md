@@ -122,6 +122,11 @@ Symbols and footprints are embedded in the design files. The project lib tables 
 
 ## Revisions
 
+- **2026-08-14**: rev2 fab sets re-exported and verified against board and
+  schematic (`Lite_rev2`, `Lite-UFL_rev2`, `Mono_rev2`, `Gemini_rev2`);
+  Lite-UFL `J1` carries LCSC `C88374` on board and schematic, previously
+  missing from the BOM; E6 substitute STEP models rebuilt from the trusted
+  wrl geometry; schematic PDFs in `exports/schematics/` regenerated.
 - **2026-08-05**: OSHWA certification (BE000030 to BE000033), Lite/Lite-UFL ELRS target pin remap, Mono/Gemini target updates, shared Incutec KiCad-Library submodule wired (2026-08-04). Layout rework (clock 3.3 V supply, enlarged pads, Lite/Lite-UFL and Mono outlines +1.0 mm) landed after the validated build and has not been fabricated.
 - **2026-06-10**: combined `OpenRX-all` fabrication set ordered at JLCPCB (gerbers, BOM, CPL in `OpenRX-Gemini/`).
 - **2026-06-07**: single-source-of-truth docs pass, standardized board renders.

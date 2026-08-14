@@ -4219,6 +4219,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C88374"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d1c86c7c-7cf7-4ae5-8c49-8e5d6a62a190")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*")
 		(path "/d4225140-81df-42e7-abd7-e679e5ab5187/8389217b-a456-4d8a-943b-1370b0cf62e0")
 		(sheetname "/ESP32-C3 + SX1281 Core (UFL)/")

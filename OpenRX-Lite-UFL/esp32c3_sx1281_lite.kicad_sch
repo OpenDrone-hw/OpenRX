@@ -9484,7 +9484,7 @@
 				)
 			)
 		)
-		(property "LCSC" " C88374"
+		(property "LCSC" "C88374"
 			(at 187.96 116.84 0)
 			(hide yes)
 			(show_name no)

@@ -15,7 +15,7 @@ radio IC, frequency band, RF front end and antenna interface. All four are
 | Layout | Multi-variant. One directory per variant at repo root, each with its own KiCad project |
 | Variants | `OpenRX-Lite/`, `OpenRX-Lite-UFL/`, `OpenRX-Mono/`, `OpenRX-Gemini/` |
 | Shared | `shared/sheets/` hierarchical sheets, `shared/libs/`, `shared/elrs-targets/` firmware target JSON |
-| Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), submodule at `libs/KiCad-Library` |
+| Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), catalogue only; every library this board uses is local to the repo |
 | Archive | `archive/legacy-projects/` holds five superseded designs. Historical record, not maintained |
 | License | CERN-OHL-S-2.0 |
 
@@ -118,7 +118,7 @@ Minimum ExpressLRS version **3.5.0**, as declared by `min_version` in `targets_e
 
 ## Libraries
 
-Symbols and footprints are embedded in the design files. The project lib tables reference the in-repo `shared/libs/OpenRX-Shared.*` library (`${KIPRJMOD}/../shared/libs/`) and the shared `Incutec` library from the `libs/KiCad-Library` git submodule (`${KIPRJMOD}/../libs/KiCad-Library/`). Passives and some packages (coax connectors, QFNs) use stock KiCad library footprints resolved through their embedded copies. Symbols carry an `LCSC` property for JLCPCB BOM export.
+Symbols and footprints are embedded in the design files. The project lib tables reference the in-repo `shared/libs/OpenRX-Shared.*` library (`${KIPRJMOD}/../shared/libs/`). Passives and some packages (coax connectors, QFNs) use stock KiCad library footprints resolved through their embedded copies. Symbols carry an `LCSC` property for JLCPCB BOM export.
 
 ## Revisions
 

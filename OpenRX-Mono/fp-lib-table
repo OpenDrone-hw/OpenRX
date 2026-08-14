@@ -1,4 +1,3 @@
 (fp_lib_table
   (lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/../shared/libs/OpenRX-Shared.pretty")(options "")(descr "Shared footprints for all OpenRX receivers"))
-	(lib (name "Incutec")(type "KiCad")(uri "${KIPRJMOD}/../libs/KiCad-Library/footprint/Incutec.pretty")(options "")(descr "incutec shared library (submodule libs/KiCad-Library)"))
 )

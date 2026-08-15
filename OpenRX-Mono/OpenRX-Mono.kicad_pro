@@ -771,8 +771,8 @@
     "DOC_MCU": "ESP32-C3 (QFN-32)",
     "DOC_NAME": "OpenRX-Mono",
     "DOC_PROTOCOL": "CRSF",
-    "DOC_RATING": "5 V pad in → 3.3 V TLV75533 LDO; sub-GHz + 2.4 GHz, up to 22 dBm (LR1121 + RFX2401C)",
-    "DOC_TAGLINE": "ExpressLRS dual-band receiver — single LR1121 (sub-GHz + 2.4 GHz), U.FL, 6-layer",
+    "DOC_RATING": "5 V pad in to 3.3 V TLV75533 LDO; sub-GHz + 2.4 GHz, up to 22 dBm (LR1121 + RFX2401C)",
+    "DOC_TAGLINE": "ExpressLRS dual-band receiver, single LR1121 (sub-GHz + 2.4 GHz), U.FL, 6-layer",
     "DOC_VARIANT": "Dual-band U.FL"
   },
   "tuning_profiles": {

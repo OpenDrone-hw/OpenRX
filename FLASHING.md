@@ -61,8 +61,8 @@ python3 python/binary_configurator.py --target <TARGET> \
 |---|---|---|---|
 | Mono | `Unified_ESP32C3_LR1121_RX_via_UART` | `opendrone.rx_dual.mono` | `eu_868` |
 | Gemini | `Unified_ESP32C3_LR1121_RX_via_UART` | `opendrone.rx_dual.gemini` | `eu_868` |
-| Lite | `Unified_ESP32C3_2400_RX_via_UART` | `opendrone.rx_lite` | omit (2.4 only) |
-| Lite-UFL | `Unified_ESP32C3_2400_RX_via_UART` | `opendrone.rx_lite_ufl` | omit (2.4 only) |
+| Lite | `Unified_ESP32C3_2400_RX_via_UART` | `opendrone.rx_2400.lite` | omit (2.4 only) |
+| Lite-UFL | `Unified_ESP32C3_2400_RX_via_UART` | `opendrone.rx_2400.lite_ufl` | omit (2.4 only) |
 
 `bootloader.bin`, `partitions.bin`, `boot_app0.bin` for a first flash come from the same
 `.pio/build/<ENV>/` directory. Adding `--flash bf --port <port>` to the configurator

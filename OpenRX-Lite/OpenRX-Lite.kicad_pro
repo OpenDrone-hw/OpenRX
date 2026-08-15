@@ -771,8 +771,8 @@
     "DOC_MCU": "ESP32-C3 (QFN-32)",
     "DOC_NAME": "OpenRX-Lite",
     "DOC_PROTOCOL": "CRSF",
-    "DOC_RATING": "5 V pad in → 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
-    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver — SX1281, ceramic chip antenna, 6-layer",
+    "DOC_RATING": "5 V pad in to 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
+    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver, SX1281, ceramic chip antenna, 6-layer",
     "DOC_VARIANT": "2.4 GHz ceramic"
   },
   "tuning_profiles": {

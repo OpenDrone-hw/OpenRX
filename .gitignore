@@ -86,3 +86,6 @@ OpenRX-Gemini/firmware-handoff.zip
 # Regenerable analysis dumps
 netlist.xml
 schematic_analysis.json
+
+# flashing docs stay local for now
+FLASHING.md

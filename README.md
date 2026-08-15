@@ -16,6 +16,8 @@ firmware, and differ in radio, band, RF front end and antenna.
 [![Discord](https://img.shields.io/badge/Discord-%23receivers-5865F2?logo=discord&logoColor=white)](https://discord.com/channels/1494019459822653512/1494758332903456969)
 [![Video](https://img.shields.io/badge/YouTube-How%20ExpressLRS%20Receivers%20Work-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=ssmQkRkXE84)
 
+Maintained by [@bastian2001](https://github.com/bastian2001).
+
 ## Specifications
 
 | | Lite | Lite-UFL | Mono | Gemini |
@@ -23,15 +25,15 @@ firmware, and differ in radio, band, RF front end and antenna.
 | Band | 2.4 GHz | 2.4 GHz | Dual band | Dual band, Xrossband |
 | Radio | SX1281 | SX1281 | LR1121 | 2x LR1121 |
 | Antenna | On-board ceramic | U.FL | U.FL | 2x U.FL |
-| Telemetry power | 13 dBm (20 mW) | 13 dBm (20 mW) | | |
+| Telemetry power | 13 dBm (20 mW) | 13 dBm (20 mW) | Up to 22 dBm (158 mW) | Up to 22 dBm (158 mW) |
 | Protocol | CRSF | CRSF | CRSF | CRSF |
 | MCU | ESP32-C3 | ESP32-C3 | ESP32-C3 | ESP32-C3 |
 | Input | 5 V pad | 5 V pad | 5 V pad | 5 V pad |
 | Firmware | ExpressLRS | ExpressLRS | ExpressLRS | ExpressLRS |
 | Flashing | Betaflight passthrough or Wi-Fi | Betaflight passthrough or Wi-Fi | Betaflight passthrough or Wi-Fi | Betaflight passthrough or Wi-Fi |
 | Wi-Fi antenna | Separate on-board ceramic | Separate on-board ceramic | Separate on-board ceramic | Separate on-board ceramic |
-| Dimensions | 10.0 x 11.5 mm | 10.0 x 11.5 mm | | |
-| PCB | 6-layer, 1.6 mm | 6-layer, 1.6 mm | 6-layer | 6-layer |
+| Dimensions | 10.0 x 11.5 mm | 10.0 x 11.5 mm | 10.0 x 17.3 mm | 17.0 x 15.7 mm |
+| PCB | 6-layer, 1.0 mm | 6-layer, 1.0 mm | 6-layer, 1.0 mm | 6-layer, 1.0 mm |
 
 OSHWA certified, one UID per variant:
 [Lite BE000030](https://certification.oshwa.org/be000030.html) ·

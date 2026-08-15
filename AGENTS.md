@@ -202,8 +202,7 @@ unified firmware images exist upstream:
 
 Minimum ExpressLRS version **3.5.0** (`min_version` in `targets_entries.json`).
 Transmit power per variant is in the README table; the authoritative values
-are `power_values` in the per-variant target JSON. Flashing procedure:
-[FLASHING.md](FLASHING.md).
+are `power_values` in the per-variant target JSON.
 
 Stock unified firmware runs the SX1281 variants unmodified. Mono and Gemini
 require an ExpressLRS fork branch: TCXO enable via `SetTcxoMode` on both, and

@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -6 0)
 		(layer "F.SilkS")
-		(uuid "80474f6e-e975-4243-b68b-bde41e37f6e3")
+		(uuid "5f02a5c0-fe3f-471b-86ff-45d17e1ea9bf")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "QFN-24_L4.0-W4.0-P0.50-TL-EP2.6"
 		(at 0 6 0)
 		(layer "F.Fab")
-		(uuid "171aad63-14f0-482f-a9d7-c4884f3f79ab")
+		(uuid "a121333e-da7d-4ef8-9600-8b591a635f2b")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1722e38f-ad3c-46b3-8b14-36b57ac8225a")
+		(uuid "b168680d-05b6-4dd2-8a6d-436bffb4815b")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "88902347-e28a-49b5-a8ab-86dd2197d62c")
+		(uuid "3d2c166d-5791-4719-95c6-8be6bf68fc74")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "2a8522b6-8941-476a-b9f9-13ee4876a2bb")
+		(uuid "0b302cc7-29af-48af-8f74-ec096e62a4a8")
 	)
 	(fp_line
 		(start -2.15 -1.74)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b388b1cc-55c2-41e4-a3dd-4f8f6bdea726")
+		(uuid "8055c3b8-53c0-400d-94b4-719a1b305158")
 	)
 	(fp_line
 		(start -2.15 2.16)
@@ -77,7 +77,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "5f9c70fb-70f5-4406-a3d1-7cabaa708c43")
+		(uuid "734a59ee-fb8a-49fe-9624-0d99b3622906")
 	)
 	(fp_line
 		(start -1.75 2.16)
@@ -87,7 +87,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4fa90cf5-dfed-41e3-8c3d-f35888c4ffeb")
+		(uuid "23c49bf8-83e3-4342-8cca-4a236426cc85")
 	)
 	(fp_line
 		(start 1.75 -2.14)
@@ -97,7 +97,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8777e882-c719-4f57-bca5-5635fcb56c15")
+		(uuid "feb115bc-851e-4dcc-8e80-b16f2b6283e7")
 	)
 	(fp_line
 		(start 1.75 2.16)
@@ -107,7 +107,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "afd80d5a-cadb-4c00-a4d2-b303f5fc8200")
+		(uuid "006567d2-ea20-4bf8-9f9d-1225dd68678d")
 	)
 	(fp_line
 		(start 2.15 -2.14)
@@ -117,7 +117,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "7b2a196f-4dc4-4374-ab77-7c84d04cbdd6")
+		(uuid "13f7adc2-487d-43ba-a9a3-0183ded51814")
 	)
 	(fp_line
 		(start 2.15 2.16)
@@ -127,7 +127,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "44919c8b-2cdc-42f2-b740-085144b072d4")
+		(uuid "892017ab-ad64-4208-9d23-7cf6d8960bfa")
 	)
 	(fp_circle
 		(center -2.27 -1.26)
@@ -138,7 +138,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "7f9f458a-0b93-464f-82a5-8d4fc4596be0")
+		(uuid "8f178b43-2e9e-4aab-baa7-fea46fd40c04")
 	)
 	(fp_circle
 		(center -2 -2)
@@ -149,12 +149,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "e5a42ef2-4b15-43c8-8df3-a09af24d7984")
+		(uuid "7eeae417-2e0a-494b-b420-d9d96a01bfd9")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "a2bc64e7-024b-4c4a-8e57-f04f19cd2f8b")
+		(uuid "dd31c2d4-1337-48e5-8d93-7ecae899bbd6")
 		(effects
 			(font
 				(size 1 1)
@@ -166,156 +166,156 @@
 		(at -2 -1.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "779cb495-604b-47c4-b00d-0eb4b5cc09e3")
+		(uuid "b54d5e3e-cb3b-44a2-a981-ca6622a48b24")
 	)
 	(pad "2" smd oval
 		(at -2 -0.75 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "ec132d99-df8d-4157-858b-eb26464b1e2d")
+		(uuid "d0d49e0c-1623-4570-992b-62274ede7289")
 	)
 	(pad "3" smd oval
 		(at -2 -0.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "27a71fa8-45e5-4044-8646-b66b1f6aa918")
+		(uuid "c917088c-ca5b-467f-856e-937c8845495d")
 	)
 	(pad "4" smd oval
 		(at -2 0.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "6c944988-ee06-4701-b45c-d4bb7fa6f34b")
+		(uuid "6bcec07e-dfe3-4a6f-a1aa-136d2330389d")
 	)
 	(pad "5" smd oval
 		(at -2 0.75 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "c1bc20e7-3d4d-4b79-b2da-b5a275c44c30")
+		(uuid "9eb33b2e-e0de-4ce0-8af9-44f49d04b666")
 	)
 	(pad "6" smd oval
 		(at -2 1.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "51d01219-b524-47b0-b087-306e347012fa")
+		(uuid "e6497947-682b-4d76-a5ff-393ed6d64f26")
 	)
 	(pad "7" smd oval
 		(at -1.25 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "3e7589b7-2119-4a57-b5ac-c8632ed158c8")
+		(uuid "cc9e2596-7a01-436e-b786-7dddf751b994")
 	)
 	(pad "8" smd oval
 		(at -0.75 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f10854f4-d8f4-4888-a035-75f2404260ee")
+		(uuid "f048a648-44e6-42fd-9462-4d67ccd81cf2")
 	)
 	(pad "9" smd oval
 		(at -0.25 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "2088a1b7-7978-4de9-9aae-648f8458f5d7")
+		(uuid "708d5ccc-da25-46af-8768-ce1f2186b5b6")
 	)
 	(pad "10" smd oval
 		(at 0.25 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "8fa96b8e-bbeb-434c-abfd-bb9a637832e2")
+		(uuid "027e47c4-186c-44f2-bd97-790e9e5f947e")
 	)
 	(pad "11" smd oval
 		(at 0.75 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "42948769-5c08-40b7-ba2d-e00b12315f9d")
+		(uuid "9eca7e0a-f221-499e-aaf7-c0ea5a4f5951")
 	)
 	(pad "12" smd oval
 		(at 1.25 2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "bfd30b8a-c493-4a6c-a61d-6c07fb4b6dd4")
+		(uuid "98807930-972f-429a-b469-758b1d913f3e")
 	)
 	(pad "13" smd oval
 		(at 2 1.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "03bf9caf-d57f-42bd-9d7d-65a8a749e1f1")
+		(uuid "a0a05eef-e711-4d33-b76d-211ef2711e1d")
 	)
 	(pad "14" smd oval
 		(at 2 0.75 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "fb41fe6f-7987-4589-b8a7-786567366537")
+		(uuid "c7912bcc-8737-4749-82ec-8a77b41cbf3d")
 	)
 	(pad "15" smd oval
 		(at 2 0.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "fae1413a-21ed-4ec5-8d71-d489249386f9")
+		(uuid "87961dee-43ce-4915-8025-9487791d7ed8")
 	)
 	(pad "16" smd oval
 		(at 2 -0.25 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "7c1df1a1-b603-43c2-a3a0-a22c2a0c9d40")
+		(uuid "bb6c583b-e187-424a-8cba-9829a3471341")
 	)
 	(pad "17" smd oval
 		(at 2 -0.75 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "4fb5eafb-25ee-4c8e-9bed-ec8a3888880e")
+		(uuid "32c72be1-07e7-4049-91bd-6460298222c9")
 	)
 	(pad "18" smd oval
 		(at 2 -1.24 90)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "0a91545c-58ba-4726-bfec-eedae3562e10")
+		(uuid "c5c55edc-3608-42f4-adfa-af7a55251a00")
 	)
 	(pad "19" smd oval
 		(at 1.25 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "88fcf1cb-88e3-4ed6-9fef-5abe3966b767")
+		(uuid "bebf72e1-11a6-405e-8cbc-c8bfb76bafb4")
 	)
 	(pad "20" smd oval
 		(at 0.75 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "db7e97c0-988b-4b20-840d-bafba2122846")
+		(uuid "f892a06b-4b00-4a3d-93c7-669a308e2ad1")
 	)
 	(pad "21" smd oval
 		(at 0.25 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "c47c3ff1-6769-4b49-9c36-a067971e0022")
+		(uuid "ad151a5c-8af7-4ab4-bd10-636a1c38399b")
 	)
 	(pad "22" smd oval
 		(at -0.25 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "5651c79a-71f2-4886-8be0-14297bebdade")
+		(uuid "d9ac6c97-df6f-4640-b971-3ae768241a50")
 	)
 	(pad "23" smd oval
 		(at -0.75 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "e9d67a35-b736-4cf2-9562-fde6fe1deba7")
+		(uuid "fe3786e4-9e24-4d4c-85dd-b4dc2aa2d03c")
 	)
 	(pad "24" smd oval
 		(at -1.25 -2)
 		(size 0.28 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f3bd5f2e-c740-4a9a-aff1-aa4063484cbf")
+		(uuid "d926d834-2e56-4ab5-95a4-fecfb3c6a362")
 	)
 	(pad "25" smd rect
 		(at 0 0.01)
 		(size 2.3 2.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "bd530545-c45c-4add-a8fa-40522eefb005")
+		(uuid "8bc45c3c-7abd-4e60-840e-6bd647ba08f2")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../shared/libs/OpenRX-Shared.3dshapes/QFN-24_L4.0-W4.0-P0.50-TL-EP2.6.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.step"
 		(offset
-			(xyz 0 -0 -0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)

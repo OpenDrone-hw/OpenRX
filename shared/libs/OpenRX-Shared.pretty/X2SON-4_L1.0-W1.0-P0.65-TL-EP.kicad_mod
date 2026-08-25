@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -4.32 0)
 		(layer "F.SilkS")
-		(uuid "d6c26ebe-1dcf-432e-8f33-d7764f140226")
+		(uuid "0053eaa9-b9b0-4d6b-b5fb-d94ba2e18f4b")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "X2SON-4_L1.0-W1.0-P0.65-TL-EP"
 		(at 0 4.32 0)
 		(layer "F.Fab")
-		(uuid "56faf995-34db-4aa3-a21d-00ec5da8ccaa")
+		(uuid "3e4f4db6-566b-4f92-b953-2d9d49e33bbf")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cc932020-d9e6-448b-b0fa-255c775dc020")
+		(uuid "286bf06a-f813-4097-ae74-60584a4c3ff7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "091a6ed3-696f-42f9-86fe-a9f4426f6cec")
+		(uuid "2be88acf-d085-4330-8c41-40469a045681")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "64ad68ce-6320-4b6d-ae01-ce90115c5e91")
+		(uuid "8e846223-8eb4-4dc9-a7e2-0798010440ce")
 	)
 	(fp_line
 		(start -0.55 -0.02)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "2a3e399f-9f67-479c-a9b0-6829bb95b212")
+		(uuid "338086af-3654-44c7-8eab-f8a0e2a08cff")
 	)
 	(fp_line
 		(start -0.55 -0.02)
@@ -77,7 +77,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "eaaad7a3-f1df-4409-a5c3-2d41e903b129")
+		(uuid "50ede6ce-82aa-4ae1-93a6-2a00bd1edb01")
 	)
 	(fp_line
 		(start -0.37 0.55)
@@ -87,7 +87,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "acf94d12-1280-408b-bfed-4efe837fb84f")
+		(uuid "9bda9629-3ac7-4890-a57e-1cb134f86026")
 	)
 	(fp_line
 		(start -0.37 0.55)
@@ -97,7 +97,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "aa586a10-c5d4-49a6-8211-412275a0cbb3")
+		(uuid "6aca9ef3-f55a-4836-988a-508aaeb42552")
 	)
 	(fp_line
 		(start 0.55 -0.08)
@@ -107,7 +107,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3928de17-be87-4028-84c9-b2898eb82ca2")
+		(uuid "df44e753-50ad-44cf-af32-95f85715a776")
 	)
 	(fp_circle
 		(center -0.77 -0.33)
@@ -118,7 +118,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "1197d978-0afe-4f16-b581-cede99869e47")
+		(uuid "5b2348b9-1902-469e-9686-74fbdc65fdf3")
 	)
 	(fp_circle
 		(center -0.63 -0.32)
@@ -129,7 +129,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "20538d9d-fe0d-4b15-a2f4-61b7f7778338")
+		(uuid "85106274-ca8f-4370-9667-4f4faecb5354")
 	)
 	(fp_rect
 		(start -0.8 -0.6)
@@ -140,7 +140,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "5c722e9d-1443-46f5-9fe5-892f1cc48503")
+		(uuid "a7be4472-9b03-4ba7-b6eb-88fc835d4133")
 	)
 	(fp_circle
 		(center -0.5 -0.5)
@@ -151,12 +151,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "9e35c74e-1ccf-4e59-bc69-79ed708b62f6")
+		(uuid "d24a7de2-1591-4e54-a0dd-0a6b2eac9479")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "6e4ae61c-851c-4154-a4ae-49e66e46f77d")
+		(uuid "6b10690a-b253-4a83-8c89-58ef2a61fe0a")
 		(effects
 			(font
 				(size 1 1)
@@ -182,7 +182,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "3ff7d6aa-6036-4948-9e5c-30e383d639cc")
+		(uuid "4f00c6fc-e6bb-40bf-ac16-2493f78c14b3")
 	)
 	(pad "2" smd custom
 		(at -0.43 0.32)
@@ -202,7 +202,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "83222662-eb9a-40de-888f-511298fae116")
+		(uuid "fd98e5fa-8f5b-4047-8cd6-28f313ecc3a8")
 	)
 	(pad "3" smd custom
 		(at 0.43 0.32)
@@ -222,7 +222,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "9e1540c6-83e7-4ac1-905b-b39ca80aa286")
+		(uuid "27516eb4-3b29-47c3-a152-e697b0d28619")
 	)
 	(pad "4" smd custom
 		(at 0.43 -0.32)
@@ -242,24 +242,24 @@
 				(fill yes)
 			)
 		)
-		(uuid "ccb5c504-6b3e-4a44-bea0-d1f150e7d05f")
+		(uuid "b928d27c-6146-4d4c-8758-9090b362a2a1")
 	)
 	(pad "5" smd rect
 		(at 0 0 45)
 		(size 0.48 0.48)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "db254eb5-2825-4d84-be7b-773bf0816f19")
+		(uuid "b07800b4-a053-4775-a474-0794bafbb88e")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../shared/libs/OpenRX-Shared.3dshapes/X2SON-4_L1.0-W1.0-H0.4-P0.65-TL-EPSLDPRT.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/OnSemi_XDFN4-1EP_1.0x1.0mm_EP0.52x0.52mm.step"
 		(offset
-			(xyz -0 -0 -0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 270)
+			(xyz 0 0 0)
 		)
 	)
 )

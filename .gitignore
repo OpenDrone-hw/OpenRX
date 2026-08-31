@@ -26,6 +26,7 @@ fp-info-cache
 *.tmp
 replicate_layout.log
 **/.history/
+**/.history_trim/
 
 # Python and local agent state.
 # AGENTS.md is the committed agent file, vendor-neutral on purpose. Anything

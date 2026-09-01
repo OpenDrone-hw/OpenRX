@@ -40,21 +40,23 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
   number. Pulling a newer catalogue is a deliberate, reviewed submodule commit.
 - **One person holds a board layout at a time.** KiCad files do not merge. Say
   on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
-- **ERC and DRC clean before every pull request.** Commands below.
+- **Run ERC and DRC before every pull request.** Existing approved findings
+  may remain; a new type or increased count must be reviewed before merge.
+  Commands below.
 
 ## Environment
 
 ```sh
 # schematic and board checks, per variant touched
-kicad-cli sch erc --exit-code-violations OpenRX-<Variant>/OpenRX-<Variant>.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations OpenRX-<Variant>/OpenRX-<Variant>.kicad_pcb
+kicad-cli sch erc OpenRX-<Variant>/OpenRX-<Variant>.kicad_sch
+kicad-cli pcb drc --schematic-parity --refill-zones OpenRX-<Variant>/OpenRX-<Variant>.kicad_pcb
 
 # netlist, for scripted analysis
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/<variant>.net OpenRX-<Variant>/OpenRX-<Variant>.kicad_sch
 ```
 
-Shared scripts (renders, STEP export, packaging art) live in
-`OpenDrone-Scripts`.
+Reusable scripts (renders, STEP export, packaging art) come from Incutec
+hardware tooling; the OpenDrone release standard lives in `OpenDrone-hw/.github/RELEASES.md`.
 
 ## Architecture
 

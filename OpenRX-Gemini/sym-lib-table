@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/../shared/libs/OpenRX-Shared.kicad_sym")(options "")(descr "Shared symbols for all OpenRX receivers"))
+  (lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/../KiCad-Library/symbol/OpenDrone.kicad_sym")(options "")(descr "legacy nickname alias for the pinned OpenDrone catalogue"))
+  (lib (name "OpenDrone")(type "KiCad")(uri "${KIPRJMOD}/../KiCad-Library/symbol/OpenDrone.kicad_sym")(options "")(descr "OpenDrone parts catalogue, root submodule"))
 )

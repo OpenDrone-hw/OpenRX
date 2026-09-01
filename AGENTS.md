@@ -12,8 +12,8 @@ end and antenna interface.
 | Designed in | KiCad 10 |
 | Layout | Multi-variant: one KiCad project per variant, each directory exactly one level below repo root, which is what makes the shared library and 3D model paths resolve |
 | Variants | `OpenRX-Lite/`, `OpenRX-Lite-UFL/`, `OpenRX-Mono/`, `OpenRX-Gemini/`, each with `OpenRX-<Variant>.kicad_pro`, `.kicad_sch`, `.kicad_pcb`, `.kicad_dru` |
-| Local library | `shared/libs/OpenRX-Shared.pretty/` and `.3dshapes/`, nickname `OpenRX-Shared`, referenced via `${KIPRJMOD}/../shared/libs/`. The sym-lib-tables still name `OpenRX-Shared.kicad_sym`, |
-| Shared library | OpenDrone-hw/KiCad-Library, Contains all components used on produced (Alpha onwards) hardware. Work in local library and migrate to shared library once component selection is fixed. |
+| Local library | `shared/libs/OpenRX-Shared.pretty/` and `.3dshapes/`, nickname `OpenRX-Shared`, referenced via `${KIPRJMOD}/../shared/libs/`. The legacy `OpenRX-Shared` symbol nickname aliases the pinned central symbol library. |
+| Shared library | `KiCad-Library/`, pinned root submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Firmware targets | `shared/elrs-targets/`: per-variant ExpressLRS hardware JSON plus `targets_entries.json` |
 | Fab | `OpenRX-<Variant>/fab/` |
 | Board setup | 6 layers, 1.0 mm. Line standard: 0.09 mm clearance and track, via 0.35 on 0.20 drill |
@@ -32,12 +32,12 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
   value that changes the circuit.
 - **Close KiCad before any write to a KiCad file.** KiCad caches library tables
   at process start and overwrites files on save.
-- **Reuse before you draw.** Check
-  [KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library) and its
+- **Reuse before you draw.** Check the `OpenDrone` library and its
   `PARTS-USED.md` first. If the part is there we have already sourced,
-  footprinted and shipped it: copy the symbol and footprint into this repo's
-  `lib` library and use it. Draw a new part only when the library has nothing
-  that fits, and import it with `easyeda2kicad` from its LCSC number.
+  footprinted and shipped it, and its symbol links to the exact committed
+  datasheet: place it from `OpenDrone`. Draw a new part only when the catalogue
+  has nothing that fits, and import it with `easyeda2kicad` from its LCSC
+  number. Pulling a newer catalogue is a deliberate, reviewed submodule commit.
 - **One person holds a board layout at a time.** KiCad files do not merge. Say
   on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - **ERC and DRC clean before every pull request.** Commands below.

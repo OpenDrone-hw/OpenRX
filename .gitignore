@@ -51,7 +51,8 @@ netlist_*.json
 **/schematic.json
 **/tools/.lcsc_mpn_cache.json
 
-# Datasheets: downloadable, re-synced by the digikey and lcsc skills
+# Local or legacy datasheet caches. Exact shared PDFs are committed once in
+# the KiCad-Library submodule under datasheet/.
 datasheets/
 
 # Working fab exports. For a tagged release, force-add the release set:

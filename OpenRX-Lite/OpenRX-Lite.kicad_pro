@@ -765,6 +765,7 @@
     ]
   ],
   "text_variables": {
+    "OPENDRONE_LIB": "${KIPRJMOD}/../KiCad-Library",
     "DOC_FIRMWARE": "ExpressLRS",
     "DOC_HANDLE": "openrx-lite",
     "DOC_INPUT": "5 V solder pad",

@@ -14,9 +14,10 @@ own live KiCad sources or ExpressLRS target definitions after the split.
 | OpenRX Gemini | [OpenDrone-hw/OpenRX-Gemini](https://github.com/OpenDrone-hw/OpenRX-Gemini) |
 
 Route board design, firmware-target, validation, rendering, and release work to
-the corresponding repository. Keep family navigation, cross-board context,
-and historical discussion here. Do not copy board facts back into this repo
-when a link to the authoritative board README or AGENTS file is sufficient.
+the corresponding repository. Keep family navigation and cross-board context
+here; historical discussion stays in Git history and GitHub threads. Do not
+copy board facts back into this repo when a link to the authoritative board
+README or AGENTS file is sufficient.
 
 The original combined source remains available through Git history and the
 `rev2` and `rev2.1` tags. Do not recreate a second live copy on this branch.

@@ -68,6 +68,8 @@ datasheets/
 # ignore the 3D models inside lib.3dshapes/, which are committed.
 export/
 exports/
+# Superseded supplier export kept on disk for reference only, never sent
+panel/export-stale-pre-split/
 /hardware/*.step
 **/bom/
 **/*_Paste.dxf

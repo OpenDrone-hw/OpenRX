@@ -2,7 +2,7 @@
 
 Source: `https://artifactory.expresslrs.org/ExpressLRS/hardware.zip` (the artifact the Configurator pulls). Snapshot taken 2026-04-30.
 
-**Total ESP32-C3 RX SKUs shipped to end users: 55**
+**Total ESP32-C3 RX SKUs shipped to end users: 54**
 
 Categorized by RF architecture so each OpenRX SKU has direct apples-to-apples comparison.
 

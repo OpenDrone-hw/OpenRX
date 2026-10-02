@@ -30,6 +30,9 @@ KiCad sources, firmware target definitions, board documentation, and future
 releases live in those repositories. The family-level Rev 2 and Rev 2.1 tags
 and releases remain here as the immutable record of the original combined
 repository; their per-board assets are also available from each board repo.
+The Rev 2.2 tag marks the source of the production panel in `panel/`, the four
+boards merged on one strip. Fab-ready manufacturing files are kept in a private
+Incutec production repository and are not published.
 
 ## Specifications
 

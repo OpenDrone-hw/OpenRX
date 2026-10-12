@@ -1,0 +1,18 @@
+{
+  "output": "OpenRX-panel-rev2.2.kicad_pcb",
+  "title_revision": "rev2.2",
+  "boards": [
+    {"name": "OpenRX-Gemini", "repository": "../../OpenRX-Gemini",
+     "path": "hardware/OpenRX-Gemini.kicad_pcb", "tag": "rev2.2", "ref_offset": 0, "offset_mm": [0, 0]},
+    {"name": "OpenRX-Mono", "repository": "../../OpenRX-Mono",
+     "path": "hardware/OpenRX-Mono.kicad_pcb", "tag": "rev2.2", "ref_offset": 100, "offset_mm": [22.65, 0.7]},
+    {"name": "OpenRX-Lite-UFL", "repository": "../../OpenRX-Lite-UFL",
+     "path": "hardware/OpenRX-Lite-UFL.kicad_pcb", "tag": "rev2.2", "ref_offset": 200, "offset_mm": [38.15, 7.0]},
+    {"name": "OpenRX-Lite", "repository": "../../OpenRX-Lite",
+     "path": "hardware/OpenRX-Lite.kicad_pcb", "tag": "rev2.2", "ref_offset": 300, "offset_mm": [54.15, 7.0]}
+  ],
+  "mpn_renumber": {
+    "2450AT18A100E": {"mpn": "2450AT18A0100001E", "source": "https://www.johansontechnology.com/docs/3827/Antenna-2450AT18A0100001E-Rev4.0.pdf"},
+    "2450FM07D0034T": {"mpn": "2450FM07D0034001T", "source": "https://www.johansontechnology.com/part/2450FM07D0034001T/"}
+  }
+}

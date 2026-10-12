@@ -24,20 +24,25 @@ The original combined source remains available through Git history and the
 
 ## The production panel
 
-`panel/` holds `OpenRX-panel-rev2`, the four boards merged onto one strip for
-combined fabrication and assembly. It is manufacturing geometry, not a design
-source, and it is the one board file this repository owns: it belongs to no
-single board repository because it contains all four.
+`panel/` holds `OpenRX-panel-rev2.2`: the four boards in one file, four
+separate outlines, for combined fabrication and assembly. The fab panelises
+it (rails, fiducials, mouse bites). It is manufacturing geometry, not a design
+source, and it is the one board file this repository owns.
 
-Every part on it comes from a board repository and nothing is designed here. A
-change to nets, footprints or component values goes to the owning board
-repository and the panel is rebuilt from the result. References are unique
-across the strip in blocks of 100 per board, so `U217` is OpenRX-Lite-UFL's
-`U17`; `OpenRX-panel-rev2_refmap.csv` is the generated map and
-`hardware/kicad/panel_renumber.py` in `scripts` regenerates it.
+It is generated, never edited: `panel/panel.json` names each board's
+repository, tag, offset and reference block, and
+`$KPY hardware/kicad/panel_merge.py panel/panel.json` in `scripts` rebuilds it
+from the tagged board files, refills every zone and writes the refmap.
+`--check` must pass before a release. A hand-edited panel shipped an empty
+Mono In3 +3V3 plane in 2026 and every Mono of that batch was dead.
 
-The panel has no schematic, so the export gate checks its BOM against the four
-released board BOMs instead of a netlist. Release it with the production
-handoff adapter and `--panel-of` naming all four.
+A change to nets, footprints or component values goes to the owning board
+repository; tag it, update the tag in `panel.json` and rebuild. References are
+unique in blocks of 100 per board, so `U217` is OpenRX-Lite-UFL's `U17`; nets
+are named `<board>/<net>`. `mpn_renumber` holds only manufacturer renumbers of
+the same part, with the source.
+
+Release it with the production handoff adapter and `--panel-of` naming the four
+released board BOMs: the adapter checks the panel BOM line by line against them.
 The OpenDrone release standard is
 [RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).

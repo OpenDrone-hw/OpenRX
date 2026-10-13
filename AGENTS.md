@@ -50,3 +50,31 @@ Release it with the production handoff adapter and `--panel-of` naming the four
 released board BOMs: the adapter checks the panel BOM line by line against them.
 The OpenDrone release standard is
 [RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
+
+## Rules
+
+Identical in every OpenDrone board repo. Do not edit here; edit the template.
+
+- **Never text-edit** `.kicad_sch`, `.kicad_pcb` or `.kicad_dru`. Use KiCad, or
+  kicad-skip / the pcbnew API for scripted changes. `.kicad_pro` is JSON and may
+  be edited directly for metadata.
+- **Metadata yes, connections no.** An agent may write BOM and documentation
+  fields (MPN, Manufacturer, LCSC, Cost, Datasheet, text variables). An agent
+  may not change nets, wiring, routing, placement, footprint assignment, or any
+  value that changes the circuit.
+- **Close KiCad before any write to a KiCad file.** KiCad caches library tables
+  at process start and overwrites files on save.
+- **Reuse before you draw.** Check the `OpenDrone` library and its
+  `PARTS-USED.md` first. If the part is there we have already sourced,
+  footprinted and shipped it, and its symbol links to the exact committed
+  datasheet: place it from `OpenDrone`. Draw a new part into `lib` only when
+  the catalogue has nothing that fits, imported with
+  `easyeda2kicad` from its LCSC number. Pulling a newer catalogue is a
+  deliberate, reviewed commit: `git submodule update --remote
+  hardware/KiCad-Library`, then DRC.
+- **One person holds a board layout at a time.** KiCad files do not merge. Say
+  on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Run ERC and DRC before every pull request.** Existing approved findings
+  may remain; a new type or increased count must be reviewed before merge.
+  Commands are in Environment above.
+

@@ -24,10 +24,11 @@ The original combined source remains available through Git history and the
 
 ## The production panel
 
-`panel/` holds `OpenRX-panel-rev2.2`: the four boards in one file, four
-separate outlines, for combined fabrication and assembly. The fab panelises
-it (rails, fiducials, mouse bites). It is manufacturing geometry, not a design
-source, and it is the one board file this repository owns.
+`panel/` holds `OpenRX-panel-rev2.2`: the four boards joined into one 4-in-1
+panel by breakaway webs with mouse-bite rows, for combined fabrication and
+assembly. The fab arrays this panel and adds rails and fiducials; NextPCB does
+not panelise mixed designs or edit customer Gerbers (2026-10-13). It is
+manufacturing geometry, not a design source.
 
 It is generated, never edited: `panel/panel.json` names each board's
 repository, tag, offset and reference block, and
@@ -35,6 +36,9 @@ repository, tag, offset and reference block, and
 from the tagged board files, refills every zone and writes the refmap.
 `--check` must pass before a release. A hand-edited panel shipped an empty
 Mono In3 +3V3 plane in 2026 and every Mono of that batch was dead.
+The webs and mouse bites come from `frame` in `panel.json`: the outline and
+`Panelization:` footprints of the earlier panel at commit 0459acc, nothing else
+of it. Copper keepouts over each web keep the planes as on the released boards.
 
 A change to nets, footprints or component values goes to the owning board
 repository; tag it, update the tag in `panel.json` and rebuild. References are

@@ -53,9 +53,7 @@ The OpenDrone release standard is
 
 Production change (founder, 2026-10-24): rev2.2 is the last 4-in-1 panel. From
 the next order each board is ordered as its own SKU on the fab's own production
-panel; the per-board lessons from the NextPCB CAM review of rev2.2 (job
-37666-3823383) are in each board repository's `AGENTS.md` under "Production
-change note (2026-10-24)". Keep `panel/` as the record of the October 2026 order.
+panel. Keep `panel/` as the record of the October 2026 order.
 
 ## Rules
 

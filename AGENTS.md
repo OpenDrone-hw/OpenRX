@@ -58,6 +58,8 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 - **Never text-edit** `.kicad_sch`, `.kicad_pcb` or `.kicad_dru`. Use KiCad, or
   kicad-skip / the pcbnew API for scripted changes. `.kicad_pro` is JSON and may
   be edited directly for metadata.
+  kicad-skip cannot round-trip KiCad 10 schematics: use a full S-expression
+  parser, `kicad-cli sch upgrade --force`, then an ERC and netlist diff.
 - **Metadata yes, connections no.** An agent may write BOM and documentation
   fields (MPN, Manufacturer, LCSC, Cost, Datasheet, text variables). An agent
   may not change nets, wiring, routing, placement, footprint assignment, or any

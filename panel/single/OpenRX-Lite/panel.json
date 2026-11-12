@@ -1,12 +1,12 @@
 {
-  "output": "OpenRX-Lite-rev2.2.kicad_pcb",
-  "title_revision": "rev2.2",
+  "output": "OpenRX-Lite-rev2.3.kicad_pcb",
+  "title_revision": "rev2.3",
   "boards": [
     {
       "name": "OpenRX-Lite",
       "repository": "../../../../OpenRX-Lite",
       "path": "hardware/OpenRX-Lite.kicad_pcb",
-      "tag": "rev2.2",
+      "tag": "rev2.3",
       "ref_offset": 0,
       "offset_mm": [
         0,

@@ -495,6 +495,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -518,7 +519,7 @@
     ]
   },
   "meta": {
-    "filename": "OpenRX-Lite-UFL-rev2.2.kicad_pro",
+    "filename": "OpenRX-Lite-UFL-rev2.3.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -526,9 +527,9 @@
       {
         "bus_width": 12,
         "clearance": 0.09,
-        "diff_pair_gap": 0.1,
+        "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.1,
+        "diff_pair_width": 0.2,
         "line_style": 0,
         "microvia_diameter": 0.2,
         "microvia_drill": 0.1,
@@ -667,14 +668,14 @@
         },
         {
           "group_by": false,
-          "label": "Manufacturer",
-          "name": "Manufacturer",
+          "label": "MPN",
+          "name": "MPN",
           "show": false
         },
         {
           "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
+          "label": "Manufacturer",
+          "name": "Manufacturer",
           "show": false
         },
         {
@@ -746,9 +747,9 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "OpenRX-Gemini.kicad_sch",
-        "name": "OpenRX-Gemini",
-        "uuid": "c2d3e4f5-a6b7-8901-cdef-234567890abc"
+        "filename": "OpenRX-Lite-UFL.kicad_sch",
+        "name": "OpenRX-Lite-UFL",
+        "uuid": "8521861a-4fab-458b-8289-5e2efb91d906"
       }
     ],
     "used_designators": "",
@@ -756,36 +757,24 @@
   },
   "sheets": [
     [
-      "c2d3e4f5-a6b7-8901-cdef-234567890abc",
-      "OpenRX-Gemini"
+      "8521861a-4fab-458b-8289-5e2efb91d906",
+      "OpenRX-Lite-UFL"
     ],
     [
-      "3494b709-9fe4-4ec8-a607-11cdb4cd6d78",
-      "ESP32-C3"
-    ],
-    [
-      "6ddf1bbe-5523-4361-9bbe-a0145fc055c6",
-      "LR1121_A"
-    ],
-    [
-      "92bfb8d6-2e76-4f7e-8d5a-1e9ea1b65bf9",
-      "LR1121_B"
-    ],
-    [
-      "fc68c4a5-0679-42dc-bec0-65ad962bb7ef",
-      "Clock"
+      "d4225140-81df-42e7-abd7-e679e5ab5187",
+      "ESP32-C3 + SX1281 Core (UFL)"
     ]
   ],
   "text_variables": {
     "DOC_FIRMWARE": "ExpressLRS",
-    "DOC_HANDLE": "openrx-gemini",
+    "DOC_HANDLE": "openrx-lite-ufl",
     "DOC_INPUT": "5 V solder pad",
     "DOC_MCU": "ESP32-C3 (QFN-32)",
-    "DOC_NAME": "OpenRX-Gemini",
+    "DOC_NAME": "OpenRX-Lite-UFL",
     "DOC_PROTOCOL": "CRSF",
-    "DOC_RATING": "5 V pad in to 3.3 V TLV75533 LDO; dual-radio sub-GHz + 2.4 GHz, up to 22 dBm/radio",
-    "DOC_TAGLINE": "ExpressLRS Xrossband receiver, dual LR1121, 2\u00d7 U.FL, 6-layer",
-    "DOC_VARIANT": "Dual-radio U.FL",
+    "DOC_RATING": "5 V pad in to 3.3 V TLV75533 LDO; 2.4 GHz, up to 13 dBm (SX1281)",
+    "DOC_TAGLINE": "ExpressLRS 2.4 GHz receiver, SX1281, U.FL antenna, 6-layer",
+    "DOC_VARIANT": "2.4 GHz U.FL",
     "OPENDRONE_LIB": "${KIPRJMOD}/KiCad-Library"
   },
   "tuning_profiles": {

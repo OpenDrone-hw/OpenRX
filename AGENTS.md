@@ -49,8 +49,10 @@ the same part, with the source.
 Release it with the production handoff adapter and `--panel-of` naming the four
 released board BOMs: the adapter checks the panel BOM line by line against them.
 `panel/single/<board>/` holds one board per variant, built the same way from
-a one-board `panel.json` with no frame: the board at tag `rev2.2` with its
-own references and outline, titleblock `rev2.2` and the same `mpn_renumber`.
+a one-board `panel.json` with no frame: the board at the tag its
+`panel.json` names (Mono and Gemini `rev2.2`; Lite and Lite-UFL `rev2.3`, which
+add the 1 Nov 2026 fix, founder 2026-11-12) with its own references and outline,
+titleblock set to that tag and the same `mpn_renumber`.
 It is for a production order per variant (batch 2, separate quantities), where
 the fab arrays each design itself. Release each with `--panel-of` naming that
 board's released BOM.

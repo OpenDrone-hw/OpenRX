@@ -1,12 +1,12 @@
 {
-  "output": "OpenRX-Lite-UFL-rev2.2.kicad_pcb",
-  "title_revision": "rev2.2",
+  "output": "OpenRX-Lite-UFL-rev2.3.kicad_pcb",
+  "title_revision": "rev2.3",
   "boards": [
     {
       "name": "OpenRX-Lite-UFL",
       "repository": "../../../../OpenRX-Lite-UFL",
       "path": "hardware/OpenRX-Lite-UFL.kicad_pcb",
-      "tag": "rev2.2",
+      "tag": "rev2.3",
       "ref_offset": 0,
       "offset_mm": [
         0,

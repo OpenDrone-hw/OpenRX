@@ -1,0 +1,27 @@
+{
+  "output": "OpenRX-Lite-rev2.3.kicad_pcb",
+  "title_revision": "rev2.3",
+  "boards": [
+    {
+      "name": "OpenRX-Lite",
+      "repository": "../../../../OpenRX-Lite",
+      "path": "hardware/OpenRX-Lite.kicad_pcb",
+      "tag": "rev2.3",
+      "ref_offset": 0,
+      "offset_mm": [
+        0,
+        0
+      ]
+    }
+  ],
+  "mpn_renumber": {
+    "2450AT18A100E": {
+      "mpn": "2450AT18A0100001E",
+      "source": "https://www.johansontechnology.com/docs/3827/Antenna-2450AT18A0100001E-Rev4.0.pdf"
+    },
+    "2450FM07D0034T": {
+      "mpn": "2450FM07D0034001T",
+      "source": "https://www.johansontechnology.com/part/2450FM07D0034001T/"
+    }
+  }
+}

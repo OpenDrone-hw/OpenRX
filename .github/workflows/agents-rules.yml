@@ -1,0 +1,12 @@
+# Checks that this repository's AGENTS.md "## Board rules" section matches the
+# template. Keep this file in every board repository created from the template.
+name: AGENTS.md Board rules
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  rules:
+    uses: OpenDrone-hw/hardware-template/.github/workflows/agents-rules-check.yml@main

@@ -26,16 +26,16 @@ The original combined source remains available through Git history and the
 
 `panel/` holds `OpenRX-panel-rev2.2`: the four boards joined into one 4-in-1
 panel by breakaway webs with mouse-bite rows, for combined fabrication and
-assembly. The fab arrays this panel and adds rails and fiducials; NextPCB does
-not panelise mixed designs or edit customer Gerbers (2026-10-13). It is
-manufacturing geometry, not a design source.
+assembly. The fab arrays this panel and adds rails and fiducials; it does not
+panelise mixed designs or edit customer Gerbers. It is manufacturing geometry,
+not a design source.
 
 It is generated, never edited: `panel/panel.json` names each board's
 repository, tag, offset and reference block, and
 `$KPY <hardware-tooling>/hardware/kicad/panel_merge.py panel/panel.json` rebuilds it
 from the tagged board files, refills every zone and writes the refmap.
 `--check` must pass before a release. A hand-edited panel shipped an empty
-Mono In3 +3V3 plane in 2026 and every Mono of that batch was dead.
+Mono In3 +3V3 plane in 2026 and every Mono built from it was dead.
 The webs and mouse bites come from `frame` in `panel.json`: the outline and
 `Panelization:` footprints of the earlier panel at commit 0459acc, nothing else
 of it. Copper keepouts over each web keep the planes as on the released boards.
@@ -51,11 +51,11 @@ released board BOMs: the adapter checks the panel BOM line by line against them.
 `panel/single/<board>/` holds one board per variant, built the same way from
 a one-board `panel.json` with no frame: the board at tag `rev2.2` with its
 own references and outline, titleblock `rev2.2` and the same `mpn_renumber`
-(Mono and Gemini). Lite and Lite-UFL batch 2 are `rev2.3`, with the 1 Nov 2026
-fix (founder 2026-11-12): released directly from their board repositories,
-whose titleblock says `rev2.3`, so no single board is kept here for them.
-It is for a production order per variant (batch 2, separate quantities), where
-the fab arrays each design itself. Release each with `--panel-of` naming that
+(Mono and Gemini). Lite and Lite-UFL are `rev2.3`, with the 1 Nov 2026 fix:
+released directly from their board repositories, whose titleblock says
+`rev2.3`, so no single board is kept here for them.
+It is for fabricating each variant on its own, where the fab arrays each
+design itself. Release each with `--panel-of` naming that
 board's released BOM.
 The OpenDrone release standard is
 [RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).

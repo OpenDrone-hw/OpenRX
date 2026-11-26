@@ -32,7 +32,7 @@ manufacturing geometry, not a design source.
 
 It is generated, never edited: `panel/panel.json` names each board's
 repository, tag, offset and reference block, and
-`$KPY <scripts>/hardware/kicad/panel_merge.py panel/panel.json` (the hardware tooling) rebuilds it
+`$KPY <hardware-tooling>/hardware/kicad/panel_merge.py panel/panel.json` rebuilds it
 from the tagged board files, refills every zone and writes the refmap.
 `--check` must pass before a release. A hand-edited panel shipped an empty
 Mono In3 +3V3 plane in 2026 and every Mono of that batch was dead.
